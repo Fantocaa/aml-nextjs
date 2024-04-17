@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Link from "next/link";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { Button } from "../ui/button";
 import CountUp, { useCountUp } from "react-countup";
 import Image from "next/image";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import Link from "next/link";
 
-export default function Specialist() {
+export default function Rate() {
   useEffect(() => {
     Aos.init({
       easing: "ease-out-cubic",
@@ -17,14 +17,6 @@ export default function Specialist() {
       delay: 100,
     });
   }, []);
-
-  // useCountUp({
-  //   ref: "counter",
-  //   end: 1234567,
-  //   enableScrollSpy: true,
-  //   scrollSpyDelay: 1000,
-  // });
-
   return (
     <>
       <div
@@ -38,7 +30,7 @@ export default function Specialist() {
         <div className="max-w-screen-xl px-2 2xl:px-8 mx-auto py-24">
           <div className="absolute inset-0 bg-white opacity-90"></div>
           <div className="flex w-full items-center relative z-10">
-            <div className="w-1/2">
+            {/* <div className="w-1/2">
               <h1 className="text-4xl font-bold max-w-md text-darkpint">
                 Specialist for transportation.
               </h1>
@@ -47,13 +39,8 @@ export default function Specialist() {
                 partners on the globe and always offer innovative solutions to
                 deal with complex logistics challenges.
               </p>
-              <Link href="/about">
-                <Button className="bg-blueaml-500 text-white hover:bg-white hover:text-blueaml-500 hover:border hover:border-blueaml-500">
-                  About Us
-                </Button>
-              </Link>
-            </div>
-            <div className="w-1/2 grid grid-cols-2 gap-4" data-aos="fade-up">
+            </div> */}
+            <div className=" w-full grid grid-cols-4 gap-4" data-aos="fade-up">
               <div className="bg-white hover:bg-darkpint hover:text-white group transition-colors rounded-xl p-4 flex flex-col justify-center items-center py-16 gap-2">
                 <div className="flex items-center gap-4">
                   <Image
