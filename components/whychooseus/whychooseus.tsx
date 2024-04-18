@@ -159,7 +159,7 @@ const WhyChooseUs = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4 bg-gradient-to-r from-blueaml-500 to-greenaml-500 p-8 md:p-16 rounded-xl col-span-4 ">
+          <div className="flex flex-col items-start gap-4 bg-gradient-to-r from-blueaml-500 to-greenaml-500 p-8 md:p-16 rounded-xl col-span-4 md:col-span-3 ">
             <p className="mt-2 text-white text-xl md:text-2xl leading-relaxed">
               &quot;Menjadi pilihan utama untuk solusi logistik internasional,
               kami siap menghadirkan kehandalan dan kepuasan pelanggan di setiap
