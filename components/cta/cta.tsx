@@ -3,8 +3,8 @@ import React from "react";
 
 const Cta = () => {
   return (
-    <div className="py-32 bg-gray-50">
-      <section className="overflow-hidden sm:grid sm:grid-cols-2 mx-auto max-w-screen-xl px-8">
+    <div className="py-16 md:py-32 bg-gray-50">
+      <section className="overflow-hidden sm:grid sm:grid-cols-2 mx-auto max-w-screen-xl px-4 md:px-8">
         {/* <div
           className="lg:py-24 flex items-center"
           style={{
@@ -34,7 +34,7 @@ const Cta = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="text-left ltr:sm:text-left rtl:sm:text-right p-12 z-10">
+          <div className="text-left ltr:sm:text-left rtl:sm:text-right p-8 md:p-12 z-10">
             <h2 className="text-2xl font-bold text-white md:text-4xl">
               Get in touch with us
             </h2>
@@ -55,8 +55,8 @@ const Cta = () => {
           width={500}
           height={500}
         /> */}
-        <div className="bg-white p-12 lg:py-24">
-          <div className="grid grid-rows-3 gap-8">
+        <div className="bg-white p-8 md:p-12 lg:py-24">
+          <div className="grid grid-rows-3 md:gap-8">
             <div>
               <div className="flex items-center gap-2">
                 <Image
@@ -65,23 +65,23 @@ const Cta = () => {
                   width={32}
                   height={32}
                 />
-                <h1 className="text-lg">Phone Number</h1>
+                <h1 className="md:text-lg">Phone Number</h1>
               </div>
-              <p className="text-xl pt-2">+62 812 8057 8717</p>
+              <p className="md:text-xl pt-2">+62 812 8057 8717</p>
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <Image src="/icon/sms.svg" alt="call" width={32} height={32} />
-                <h1 className="text-lg">Email Address</h1>
+                <h1 className="md:text-lg">Email Address</h1>
               </div>
-              <p className="text-xl pt-2">anugerahmultilogistik@aml.com</p>
+              <p className="md:text-xl pt-2">anugerahmultilogistik@aml.com</p>
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <Image src="/icon/pins.svg" alt="call" width={32} height={32} />
-                <h1 className="text-lg">Address</h1>
+                <h1 className="md:text-lg">Address</h1>
               </div>
-              <p className="text-xl pt-2">
+              <p className="md:text-xl pt-2">
                 Jln. Semut Kali No. 48-50 Pabean Cantian, Bongkaran, Surabaya
                 60161
               </p>

@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="bg-darkpint">
         <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-6">
-            <div className="col-span-3">
+            <div className="md:col-span-3">
               <div className="flex justify-center text-white sm:justify-start items-center gap-2">
                 <Image
                   alt="logo"
@@ -20,12 +20,13 @@ const Footer = () => {
                 <h1 className="font-semibold">PT. ANUGERAH MULTI LOGISTIK</h1>
               </div>
 
-              <p className="mt-6 max-w-md text-center leading-relaxed text-gray-400 sm:max-w-xs sm:text-left">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Incidunt consequuntur amet culpa cum itaque neque.
+              <p className="mt-6 text-center max-w-md leading-relaxed text-gray-400 sm:text-left">
+                Menjadi perusahaan Logistik Export dan Import terbaik yang
+                terkemuka, terpercaya, dan handal dengan mengutamakan
+                kepercayaan dan kepuasan Customer.
               </p>
 
-              <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
+              <ul className="mt-4 md:mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
                 <li>
                   <a
                     href="#"
@@ -139,13 +140,13 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:col-span-3">
-              <div className="text-center sm:text-left">
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:col-span-3">
+              <div className="text-left sm:text-left">
                 <p className="text-lg font-medium text-gray-200">
                   Our Services
                 </p>
 
-                <ul className="mt-8 space-y-4 text-sm">
+                <ul className="mt-4 md:mt-8 space-y-4 text-sm">
                   <li>
                     <Link
                       className="text-gray-400 transition hover:text-gray-400/75"
@@ -156,17 +157,17 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       className="text-gray-400 transition hover:text-gray-400/75"
-                      href="#"
+                      href="/services/freight"
                     >
                       Freight Domestic / International
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a
                       className="text-gray-400 transition hover:text-gray-400/75"
-                      href="#"
+                      href="/services/transportation"
                     >
                       Transportation
                     </a>
@@ -174,31 +175,31 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div className="text-center sm:text-left">
+              <div className="text-left sm:text-left">
                 <p className="text-lg font-medium text-gray-200">
                   Helpful Links
                 </p>
 
                 <ul className="mt-8 space-y-4 text-sm">
                   <li>
-                    <a
+                    <Link
                       className="text-gray-400 transition hover:text-gray-400/75"
-                      href="#"
+                      href="/about"
                     >
                       About
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
                     <a
                       className="text-gray-400 transition hover:text-gray-400/75"
-                      href="#"
+                      href="/services"
                     >
                       Services
                     </a>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <a
                       className="group flex justify-start gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
                       href="#"
@@ -207,19 +208,16 @@ const Footer = () => {
                         FAQs
                       </span>
 
-                      {/* <span className="relative flex h-2 w-2">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-400 opacity-75"></span>
-                        <span className="relative inline-flex size-2 rounded-full bg-teal-500"></span>
-                      </span> */}
+                      
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
 
-              <div className="text-center sm:text-left">
+              <div className="text-left md:text-center sm:text-left col-span-2 flex flex-col">
                 <p className="text-lg font-medium text-gray-200">Contact Us</p>
 
-                <ul className="mt-8 space-y-4 text-sm">
+                <ul className="mt-4 md:mt-8 space-y-4 text-sm">
                   <li>
                     <a
                       className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
@@ -300,7 +298,7 @@ const Footer = () => {
 
           <div className="mt-12 border-t border-gray-100 pt-6">
             <div className="text-center sm:flex sm:justify-between sm:text-left">
-              <p className="text-sm text-gray-500">
+              {/* <p className="text-sm text-gray-500">
                 <span className="block sm:inline">All rights reserved.</span>
 
                 <a
@@ -318,7 +316,7 @@ const Footer = () => {
                 >
                   Privacy Policy
                 </a>
-              </p>
+              </p> */}
 
               <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
                 Copyright &copy; {currentYear}. PT. ANUGERAH MULTI LOGISTIK.

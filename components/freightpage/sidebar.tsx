@@ -12,8 +12,8 @@ export default function SidebarFreight() {
   return (
     <>
       <div className="mx-auto max-w-screen-xl px-4 sm:px-8">
-        <div className="flex">
-          <div className="flex h-screen flex-col justify-between border-e bg-white min-w-72">
+        <div className="md:flex">
+          <div className="flex md:h-screen flex-col justify-between border-e bg-white min-w-72">
             <div className="pr-8 py-6">
               <ul className="mt-6 space-y-1">
                 <li>
@@ -45,7 +45,7 @@ export default function SidebarFreight() {
               </ul>
             </div>
           </div>
-          <div className="py-12 pl-8 w-full">
+          <div className="py-12 md:pl-8 w-full">
             <Image
               src="/images/clearance.webp"
               alt="clearance"

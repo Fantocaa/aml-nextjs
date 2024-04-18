@@ -5,8 +5,8 @@ const WhyChooseUs = () => {
   return (
     <section>
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-        <div className="my-8 grid grid-cols-1 gap-4 md:my-16 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
-          <div className="flex items-start gap-4 md:col-span-2">
+        <div className="my-8 grid grid-cols-4 gap-4 md:my-16 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
+          <div className="flex items-start md:items-center gap-4 col-span-4 md:col-span-2 pt-48 md:pt-0">
             <div className="max-w-xl pb-4 flex flex-col items-start">
               <div className="font-bold col-span-3">
                 <h1 className="text-3xl md:text-4xl leading-snug">
@@ -19,7 +19,7 @@ const WhyChooseUs = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl">
+          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl col-span-2 md:col-span-1">
             <span className="shrink-0 rounded-lg bg-blue-50 p-4">
               <Image
                 src="/icon/commit.svg"
@@ -41,7 +41,7 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl">
+          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl col-span-2 md:col-span-1">
             <span className="shrink-0 rounded-lg bg-blue-50 p-4">
               <Image
                 src="/icon/ontime.svg"
@@ -60,7 +60,7 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl">
+          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl col-span-2 md:col-span-1">
             <span className="shrink-0 rounded-lg bg-blue-50 p-6">
               <Image
                 src="/icon/efficiency.svg"
@@ -80,7 +80,7 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl">
+          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl col-span-2 md:col-span-1">
             <span className="shrink-0 rounded-lg bg-blue-50 p-6">
               <Image
                 src="/icon/relation.svg"
@@ -100,7 +100,7 @@ const WhyChooseUs = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl">
+          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl col-span-2 md:col-span-1">
             <span className="shrink-0 rounded-lg bg-blue-50 p-6">
               <Image
                 src="/icon/safety.svg"
@@ -120,7 +120,7 @@ const WhyChooseUs = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl">
+          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl col-span-2 md:col-span-1">
             <span className="shrink-0 rounded-lg bg-blue-50 p-6">
               <Image
                 src="/icon/nicely.svg"
@@ -140,7 +140,7 @@ const WhyChooseUs = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl">
+          <div className="flex flex-col items-start gap-4 bg-gray-50 p-4 rounded-xl col-span-2 md:col-span-1">
             <span className="shrink-0 rounded-lg bg-blue-50 p-6">
               <Image
                 src="/icon/reliability.svg"
@@ -159,8 +159,8 @@ const WhyChooseUs = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4 bg-gradient-to-r from-blueaml-500 to-greenaml-500 p-16 rounded-xl col-span-3">
-            <p className="mt-2 text-white text-2xl leading-relaxed">
+          <div className="flex flex-col items-start gap-4 bg-gradient-to-r from-blueaml-500 to-greenaml-500 p-8 md:p-16 rounded-xl col-span-4 ">
+            <p className="mt-2 text-white text-xl md:text-2xl leading-relaxed">
               &quot;Menjadi pilihan utama untuk solusi logistik internasional,
               kami siap menghadirkan kehandalan dan kepuasan pelanggan di setiap
               langkahnya.&quot;

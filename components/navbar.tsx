@@ -196,16 +196,16 @@ const Navbar = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="md:hidden fixed inset-0 overflow-hidden z-50"
           >
-            <div className="relative w-64 h-full bg-darkpint shadow-xl">
+            <div className="relative w-64 h-full bg-blueaml-500 shadow-xl">
               <div className="flex items-center justify-between p-4 py-[18px] border-b border-gray-200">
                 <Link className="block text-teal-600" href="/">
                   <span className="sr-only">Home</span>
                   <Image
-                    src="/logo/pintlogo.svg"
+                    src="/images/amlwhite.png"
                     alt="logo"
-                    width={160}
+                    width={64}
                     height={64}
-                    className="w-32 md:w-40"
+                    className="w-16 md:w-40"
                   />
                 </Link>
                 <button onClick={() => setIsOpen(false)} className="text-white">
@@ -227,7 +227,7 @@ const Navbar = () => {
               <nav className="flex flex-col p-4">
                 <Link
                   href="/"
-                  className="flex items-center p-2 text-darkpint hover:bg-greenaml-500 rounded"
+                  className="flex items-center p-2 text-white hover:bg-greenaml-500 rounded"
                 >
                   <svg
                     className="w-6 h-6 mr-3"
@@ -246,7 +246,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   href="/about"
-                  className="flex items-center p-2 text-darkpint hover:bg-greenaml-500 rounded"
+                  className="flex items-center p-2 text-white hover:bg-greenaml-500 rounded"
                 >
                   <svg
                     className="w-6 h-6 mr-3"
@@ -266,7 +266,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   href="/services"
-                  className="flex items-center p-2 text-darkpint hover:bg-greenaml-500 rounded"
+                  className="flex items-center p-2 text-white hover:bg-greenaml-500 rounded"
                 >
                   <svg
                     className="w-6 h-6 mr-3"

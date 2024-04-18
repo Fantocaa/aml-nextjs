@@ -5,15 +5,15 @@ import Image from "next/image";
 export default function LinkServices() {
   return (
     <>
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-32">
-        <div className="flex justify-between">
+      <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 sm:py-12 lg:px-8 lg:py-32">
+        <div className="md:flex justify-between">
           <h1 className="text-3xl font-semibold">What We Offer</h1>
-          <p className="max-w-md">
+          <p className="max-w-md pt-2 md:pt-0">
             Provides high quality and comprehensive transportation logistics
             services with the lowest cost
           </p>
         </div>
-        <div className="grid grid-cols-3 mt-16 gap-4">
+        <div className="grid md:grid-cols-3 mt-4 md:mt-16 gap-4">
           <Link
             href="/services/customclearance"
             className="group relative block overflow-hidden bg-darkpint"

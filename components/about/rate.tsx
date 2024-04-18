@@ -27,21 +27,14 @@ export default function Rate() {
           backgroundPosition: "center",
         }}
       >
-        <div className="max-w-screen-xl px-2 2xl:px-8 mx-auto py-24">
+        <div className="max-w-screen-xl px-4 md:px-2 2xl:px-8 mx-auto py-24">
           <div className="absolute inset-0 bg-white opacity-90"></div>
           <div className="flex w-full items-center relative z-10">
-            {/* <div className="w-1/2">
-              <h1 className="text-4xl font-bold max-w-md text-darkpint">
-                Specialist for transportation.
-              </h1>
-              <p className="py-4 max-w-md text-gray-500">
-                We provide comprehensive transportation services for our
-                partners on the globe and always offer innovative solutions to
-                deal with complex logistics challenges.
-              </p>
-            </div> */}
-            <div className=" w-full grid grid-cols-4 gap-4" data-aos="fade-up">
-              <div className="bg-white hover:bg-darkpint hover:text-white group transition-colors rounded-xl p-4 flex flex-col justify-center items-center py-16 gap-2">
+            <div
+              className=" w-full grid grid-cols-2 md:grid-cols-4 gap-4"
+              data-aos="fade-up"
+            >
+              <div className="bg-white hover:bg-darkpint hover:text-white group transition-colors rounded-xl p-4 flex flex-col md:justify-center md:items-center py-8 md:py-16 gap-2">
                 <div className="flex items-center gap-4">
                   <Image
                     src="/icon/truckinggreen.svg"
@@ -49,7 +42,7 @@ export default function Rate() {
                     width={48}
                     height={48}
                   />
-                  <h1 className="text-4xl font-bold">
+                  <h1 className="text-2xl md:text-4xl font-bold">
                     +
                     <CountUp
                       end={100}
@@ -59,11 +52,11 @@ export default function Rate() {
                     ></CountUp>
                   </h1>
                 </div>
-                <p className="text-darkpint group-hover:text-white text-xl">
+                <p className="text-darkpint group-hover:text-white text-sm md:text-xl">
                   Completed Delivery
                 </p>
               </div>
-              <div className="bg-white hover:bg-darkpint hover:text-white group transition-colors rounded-xl p-4 flex flex-col justify-center items-center py-16 gap-2">
+              <div className="bg-white hover:bg-darkpint hover:text-white group transition-colors rounded-xl p-4 flex flex-col md:justify-center md:items-center py-8 md:py-16 gap-2">
                 <div className="flex items-center gap-4">
                   <Image
                     src="/icon/truckinggreen.svg"
@@ -71,7 +64,7 @@ export default function Rate() {
                     width={48}
                     height={48}
                   />
-                  <h1 className="text-4xl font-bold">
+                  <h1 className="text-2xl md:text-4xl font-bold">
                     +
                     <CountUp
                       end={100}
@@ -81,11 +74,11 @@ export default function Rate() {
                     ></CountUp>
                   </h1>
                 </div>
-                <p className="text-darkpint group-hover:text-white text-xl">
+                <p className="text-darkpint group-hover:text-white text-sm md:text-xl">
                   Completed Delivery
                 </p>
               </div>
-              <div className="bg-white hover:bg-darkpint hover:text-white group transition-colors rounded-xl p-4 flex flex-col justify-center items-center py-16 gap-2">
+              <div className="bg-white hover:bg-darkpint hover:text-white group transition-colors rounded-xl p-4 flex flex-col md:justify-center md:items-center py-8 md:py-16 gap-2">
                 <div className="flex items-center gap-4">
                   <Image
                     src="/icon/truckinggreen.svg"
@@ -93,7 +86,7 @@ export default function Rate() {
                     width={48}
                     height={48}
                   />
-                  <h1 className="text-4xl font-bold">
+                  <h1 className="text-2xl md:text-4xl font-bold">
                     +
                     <CountUp
                       end={100}
@@ -103,11 +96,11 @@ export default function Rate() {
                     ></CountUp>
                   </h1>
                 </div>
-                <p className="text-darkpint group-hover:text-white text-xl">
+                <p className="text-darkpint group-hover:text-white text-sm md:text-xl">
                   Completed Delivery
                 </p>
               </div>
-              <div className="bg-white hover:bg-darkpint hover:text-white group transition-colors rounded-xl p-4 flex flex-col justify-center items-center py-16 gap-2">
+              <div className="bg-white hover:bg-darkpint hover:text-white group transition-colors rounded-xl p-4 flex flex-col md:justify-center md:items-center py-8 md:py-16 gap-2">
                 <div className="flex items-center gap-4">
                   <Image
                     src="/icon/truckinggreen.svg"
@@ -115,7 +108,7 @@ export default function Rate() {
                     width={48}
                     height={48}
                   />
-                  <h1 className="text-4xl font-bold">
+                  <h1 className="text-2xl md:text-4xl font-bold">
                     +
                     <CountUp
                       end={100}
@@ -125,7 +118,7 @@ export default function Rate() {
                     ></CountUp>
                   </h1>
                 </div>
-                <p className="text-darkpint group-hover:text-white text-xl">
+                <p className="text-darkpint group-hover:text-white text-sm md:text-xl">
                   Completed Delivery
                 </p>
               </div>

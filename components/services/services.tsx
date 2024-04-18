@@ -61,7 +61,7 @@ const Services = () => {
           <div className="relative flex items-center bg-darkpint text-white py-8">
             {/* <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100"></span> */}
 
-            <div className="p-8 sm:p-16 lg:p-16">
+            <div className="p-4 sm:p-16 lg:p-16">
               <h2 className="text-2xl font-bold sm:text-3xl">Our Services</h2>
 
               <p className="mt-4 text-gray-300">
