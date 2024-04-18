@@ -47,7 +47,7 @@ export default function SidebarTransport() {
           </div>
           <div className="py-12 md:pl-8 w-full">
             <Image
-              src="/images/clearance.webp"
+              src="/images/road.webp"
               alt="clearance"
               width={1080}
               height={1080}
@@ -90,6 +90,15 @@ export default function SidebarTransport() {
                   pengerjaan logistik. Selain komitmen penyediaan trucking
                   trailer, kami juga berpengalaman menangani pengiriman via
                   kereta api.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>Multimoda</AccordionTrigger>
+                <AccordionContent>
+                  Salah satu keunggulan kami sebagai transporter adalah dapat
+                  mengatur pengiriman barang secara multimoda (kombinasi jenis
+                  transportasi) untuk pengiriman barang hingga ke daerah yang
+                  sulit dijangkau oleh transportasi pada umumnya.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

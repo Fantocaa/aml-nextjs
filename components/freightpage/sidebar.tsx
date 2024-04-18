@@ -47,11 +47,11 @@ export default function SidebarFreight() {
           </div>
           <div className="py-12 md:pl-8 w-full">
             <Image
-              src="/images/clearance.webp"
+              src="/images/freight.webp"
               alt="clearance"
               width={1080}
               height={1080}
-              className="h-80 object-cover w-full"
+              className="h-80 object-cover object-center w-full"
             />
             <h1 className="text-4xl font-semibold pt-8 pb-4">
               Freight Domestic / International
