@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
             </span>
 
             <div>
-              <h2 className=" font-bold text-darkpint text-xl 2xl:text-2xl">
+              <h2 className=" font-bold text-greenaml-500 text-xl 2xl:text-2xl">
                 Commitment
               </h2>
               <p className="mt-2 text-gray-500 text-sm 2xl:text-base">
@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
               />
             </span>
             <div>
-              <h2 className=" font-bold text-darkpint text-2xl">Ontime</h2>
+              <h2 className=" font-bold text-greenaml-500 text-2xl">Ontime</h2>
               <p className="mt-2 text-gray-500 text-sm 2xl:text-base">
                 Dalam memberikan layanan yang berkualitas, kami selalu
                 memastikan ketepatan dalam estimasi waktu yang kami janjikan.
@@ -72,7 +72,9 @@ const WhyChooseUs = () => {
             </span>
 
             <div>
-              <h2 className=" font-bold text-darkpint text-2xl">Efficiency</h2>
+              <h2 className=" font-bold text-greenaml-500 text-2xl">
+                Efficiency
+              </h2>
               <p className="mt-2 text-gray-500">
                 Bersama dengan tim melakukan tugas dengan cepat, tepat, dan
                 cermat sehingga memberikan hasil yang memuaskan bagi customer.
@@ -92,7 +94,9 @@ const WhyChooseUs = () => {
             </span>
 
             <div>
-              <h2 className=" font-bold text-darkpint text-2xl">Relation</h2>
+              <h2 className=" font-bold text-greenaml-500 text-2xl">
+                Relation
+              </h2>
 
               <p className="mt-2 text-gray-500">
                 Kami memastikan menjalankan tugas dengan baik tanpa ada
@@ -112,7 +116,7 @@ const WhyChooseUs = () => {
             </span>
 
             <div>
-              <h2 className=" font-bold text-darkpint text-2xl">Safety</h2>
+              <h2 className=" font-bold text-greenaml-500 text-2xl">Safety</h2>
 
               <p className="mt-2 text-gray-500">
                 Kami memastikan menjalankan tugas dengan baik tanpa ada
@@ -132,7 +136,7 @@ const WhyChooseUs = () => {
             </span>
 
             <div>
-              <h2 className=" font-bold text-darkpint text-2xl">Nicely</h2>
+              <h2 className=" font-bold text-greenaml-500 text-2xl">Nicely</h2>
 
               <p className="mt-2 text-gray-500">
                 Kami memastikan menjalankan tugas dengan baik tanpa ada
@@ -151,7 +155,9 @@ const WhyChooseUs = () => {
               />
             </span>
             <div>
-              <h2 className=" font-bold text-darkpint text-2xl">Reliability</h2>
+              <h2 className=" font-bold text-greenaml-500 text-2xl">
+                Reliability
+              </h2>
 
               <p className="mt-2 text-gray-500">
                 Kami memastikan menjalankan tugas dengan baik tanpa ada

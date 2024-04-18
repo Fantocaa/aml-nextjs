@@ -161,7 +161,7 @@ const Navbar = () => {
 
               <div className="md:flex items-center gap-4 hidden">
                 <div className="sm:flex sm:gap-4">
-                  <Link href="https://wa.link/qnedf4" target="_blank">
+                  <Link href="https://wa.link/j9utdx" target="_blank">
                     <Button
                       variant="secondary"
                       className="bg-greenaml-100 hover:bg-greenaml-200"
@@ -288,7 +288,7 @@ const Navbar = () => {
           </motion.div>
         </>
       )}
-      <Link href="https://wa.link/qnedf4" target="_blank" className="md:hidden">
+      <Link href="https://wa.link/j9utdx" target="_blank" className="md:hidden">
         <Button className="fixed z-50 bottom-10 right-4 rounded-full py-8 bg-green-500 shadow-xl hover:bg-green-300">
           {/* <Button variant="secondary"> */}
           <Image

@@ -33,11 +33,15 @@ export default function AboutMain() {
 
               <Tabs defaultValue="account" className="w-full mt-8">
                 <TabsList>
-                  <TabsTrigger value="account">Our Vision</TabsTrigger>
-                  <TabsTrigger value="password">Our Mission</TabsTrigger>
+                  <TabsTrigger value="account" className="text-2xl py-4">
+                    Our Vision
+                  </TabsTrigger>
+                  <TabsTrigger value="password" className="text-2xl py-4">
+                    Our Mission
+                  </TabsTrigger>
                 </TabsList>
-                <TabsContent value="account">
-                  <h1 className="font-semibold text-2xl py-4">Our Vision</h1>
+                <TabsContent value="account" className="pt-4">
+                  {/* <h1 className="font-semibold text-2xl py-4">Our Vision</h1> */}
                   Menjadi Perusahaan Logistik Export dan Import terbaik yang
                   terkemuka, terpercaya, dan handal dengan mengutamakan
                   kepercayaan dan kepuasan Customer.
@@ -52,8 +56,8 @@ export default function AboutMain() {
                   pelanggan.
                 </TabsContent>
                 <TabsContent value="password">
-                  <h1 className="font-semibold text-2xl py-4">Our Mission</h1>
-                  <ul className="list-disc ml-5 pb-[120px]">
+                  {/* <h1 className="font-semibold text-2xl py-4">Our Mission</h1> */}
+                  <ul className="list-disc ml-5 pb-[120px] pt-4">
                     <li>
                       Memberikan Pelayanan yang Kompetitif, Berkualitas, dan
                       Aman.

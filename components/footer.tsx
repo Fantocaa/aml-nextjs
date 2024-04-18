@@ -27,7 +27,7 @@ const Footer = () => {
               </p>
 
               <ul className="mt-4 md:mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
-                <li>
+                {/* <li>
                   <a
                     href="#"
                     rel="noreferrer"
@@ -48,11 +48,11 @@ const Footer = () => {
                       />
                     </svg>
                   </a>
-                </li>
+                </li> */}
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="https://www.instagram.com/pintindonesialogistik?igsh=MWtyMDRvZWFyMGNqdg=="
                     rel="noreferrer"
                     target="_blank"
                     className="text-white transition hover:text-white/75"
@@ -70,6 +70,22 @@ const Footer = () => {
                         clipRule="evenodd"
                       />
                     </svg>
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    rel="noreferrer"
+                    target="_blank"
+                    className="text-white transition hover:text-white/75"
+                  >
+                    <span className="sr-only">LinkedIn</span>
+                    <Image
+                      src="/icon/linkedin.svg"
+                      alt=""
+                      width={22}
+                      height={22}
+                    />
                   </a>
                 </li>
 
@@ -141,7 +157,7 @@ const Footer = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:col-span-3">
-              <div className="text-left sm:text-left">
+              <div className="text-left sm:text-left col-start-2">
                 <p className="text-lg font-medium text-gray-200">
                   Our Services
                 </p>
@@ -214,7 +230,7 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div className="text-left md:text-center sm:text-left col-span-2 flex flex-col">
+              {/* <div className="text-left md:text-center sm:text-left col-span-2 flex flex-col">
                 <p className="text-lg font-medium text-gray-200">Contact Us</p>
 
                 <ul className="mt-4 md:mt-8 space-y-4 text-sm">
@@ -292,12 +308,12 @@ const Footer = () => {
                     </address>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
 
           <div className="mt-12 border-t border-gray-100 pt-6">
-            <div className="text-center sm:flex sm:justify-between sm:text-left">
+            <div className="text-center">
               {/* <p className="text-sm text-gray-500">
                 <span className="block sm:inline">All rights reserved.</span>
 
