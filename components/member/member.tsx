@@ -16,7 +16,7 @@ export default function Member() {
             />
             <div className="z-50 bg-white p-4 text-darkpint shadow-xl md:py-8 group-hover:bg-greenaml-500 group-hover:text-white transition-colors duration-200">
               <h2 className="text-sm">Manager</h2>
-              <h1 className="text-md md:text-xl font-semibold">
+              <h1 className="text-md md:text-xl font-semibold pt-1">
                 Bessie Cooper
               </h1>
             </div>
@@ -25,15 +25,15 @@ export default function Member() {
           <div className="group bg-darkpint">
             <Image
               alt="member"
-              src="/images/deby.webp"
+              src="/images/Ricky.webp"
               className="h-64 md:h-96 w-full object-cover opacity-75 transition-opacity group-hover:opacity-100"
               width={1080}
               height={1080}
             />
             <div className="z-50 bg-white p-4 text-darkpint shadow-xl md:py-8 group-hover:bg-greenaml-500 group-hover:text-white transition-colors duration-200">
               <h2 className="text-sm">Manager</h2>
-              <h1 className="text-base md:text-xl font-semibold">
-                Bessie Cooper
+              <h1 className="text-base md:text-xl font-semibold pt-1">
+                Ricky Reza
               </h1>
             </div>
           </div>

@@ -16,13 +16,13 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { LucideMail } from "lucide-react";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const controls = useAnimation();
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,8 +69,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const [showDropdown, setShowDropdown] = useState(false);
+
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    setShowDropdown(!showDropdown);
   };
 
   return (
@@ -155,25 +157,41 @@ const Navbar = () => {
                         </Button>
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/location">
+                        <Button
+                          variant="link"
+                          className="text-darkpint hover:text-greenaml-500/75"
+                        >
+                          Location
+                        </Button>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="https://karier.tako.co.id/" target="__blank">
+                        <Button
+                          variant="link"
+                          className="text-darkpint hover:text-greenaml-500/75"
+                        >
+                          Careers
+                        </Button>
+                      </Link>
+                    </li>
                   </ul>
                 </nav>
               </div>
 
               <div className="md:flex items-center gap-4 hidden">
                 <div className="sm:flex sm:gap-4">
-                  <Link href="https://wa.link/j9utdx" target="_blank">
+                  <Link href="/contact">
                     <Button
                       variant="secondary"
                       className="bg-greenaml-100 hover:bg-greenaml-200"
                     >
-                      <Image
-                        src="/images/call-calling.svg"
-                        alt="telp"
-                        width={16}
-                        height={16}
-                        className="mr-2"
-                      />
-                      Hubungi Kami
+                      <div className="flex gap-2 items-center">
+                        <LucideMail />
+                        <h1>Hubungi Kami</h1>
+                      </div>
                     </Button>
                   </Link>
                 </div>
@@ -288,19 +306,59 @@ const Navbar = () => {
           </motion.div>
         </>
       )}
-      <Link href="https://wa.link/j9utdx" target="_blank" className="md:hidden">
-        <Button className="fixed z-50 bottom-10 right-4 rounded-full py-8 bg-green-500 shadow-xl hover:bg-green-300">
-          {/* <Button variant="secondary"> */}
-          <Image
-            src="/images/call-calling.svg"
-            alt="telp"
-            width={24}
-            height={24}
-            className="mr-2"
-          />
-          {/* </Button> */}
-        </Button>
-      </Link>
+
+      <div className="fixed z-50 bottom-10 right-4 md:right-10 2xl:right-24">
+        <div className="relative">
+          <button
+            className="rounded-full py-6 px-5 bg-green-500 shadow-xl hover:bg-green-300"
+            onClick={toggleDropdown}
+          >
+            <Image
+              src="/images/call-calling.svg"
+              alt="telp"
+              width={24}
+              height={24}
+              className="mr-2 "
+            />
+          </button>
+          {showDropdown && (
+            <div className="absolute bottom-20 right-0 py-2 w-48 bg-white rounded-lg shadow-xl">
+              <div className="py-1">
+                <Link href="https://wa.link/j9utdx" target="__blank">
+                  <div className="flex items-center hover:bg-gray-200 px-4 py-2 gap-2">
+                    {/* <LucideGlobe /> */}
+                    <Image
+                      src="icon/wacolor.svg"
+                      alt="wa"
+                      width={24}
+                      height={24}
+                    />
+                    <button className="text-sm text-gray-800 text-left">
+                      Cabang Surabaya
+                    </button>
+                  </div>
+                </Link>
+                <Link href="https://wa.link/8ocpit" target="__blank">
+                  <div className="flex items-center hover:bg-gray-200 px-4 py-2 gap-2">
+                    {/* <LucideGlobe /> */}
+                    <Image
+                      src="icon/wacolor.svg"
+                      alt="wa"
+                      width={24}
+                      height={24}
+                    />
+                    <button className="text-sm text-gray-800 text-left">
+                      Cabang Semarang
+                    </button>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* </Link> */}
 
       {/* <NavigationMenu>
         <NavigationMenuList>

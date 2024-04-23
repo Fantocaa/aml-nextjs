@@ -13,7 +13,7 @@ export default function SidebarTransport() {
     <>
       <div className="mx-auto max-w-screen-xl px-4 sm:px-8">
         <div className="md:flex">
-          <div className="flex md:h-screen flex-col justify-between border-e bg-white min-w-72">
+          <div className="flex md:h-full flex-col justify-between bg-white min-w-72 h-full sticky top-6">
             <div className="pr-8 py-6">
               <ul className="mt-6 space-y-1">
                 <li>
@@ -28,18 +28,34 @@ export default function SidebarTransport() {
                 <li>
                   <Link
                     href="/services/freight"
-                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 "
+                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
-                    Freight Domestic / International
+                    Sea Freight Forwarding
                   </Link>
                 </li>
 
                 <li>
                   <Link
+                    href="/services/trucking"
+                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                  >
+                    Trucking
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/cargoinsurance"
+                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                  >
+                    Cargo Insurance Brokerage
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/services/transportation"
                     className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
                   >
-                    Transportation
+                    Intermodal & Multimodal Transportation
                   </Link>
                 </li>
               </ul>
@@ -53,7 +69,9 @@ export default function SidebarTransport() {
               height={1080}
               className="h-80 object-cover w-full"
             />
-            <h1 className="text-4xl font-semibold pt-8 pb-4">Transportation</h1>
+            <h1 className="text-4xl font-semibold pt-8 pb-4">
+              Intermodal & Multimodal Transportation
+            </h1>
             <p>
               Kami menyediakan layanan pengiriman via laut, udara, maupun darat
               <br />

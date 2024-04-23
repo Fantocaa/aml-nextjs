@@ -13,10 +13,10 @@ export default function LinkServices() {
             services with the lowest cost
           </p>
         </div>
-        <div className="grid md:grid-cols-3 mt-4 md:mt-16 gap-4">
+        <div className="grid md:grid-cols-6 mt-4 md:mt-16 gap-4">
           <Link
             href="/services/customclearance"
-            className="group relative block overflow-hidden bg-darkpint"
+            className="group relative block overflow-hidden bg-darkpint col-span-2"
           >
             <p className="absolute start-6 bottom-6 z-10 transition font-semibold text-2xl text-white">
               Custom Clearance
@@ -32,10 +32,10 @@ export default function LinkServices() {
           </Link>
           <Link
             href="/services/freight"
-            className="group relative block overflow-hidden bg-darkpint"
+            className="group relative block overflow-hidden bg-darkpint col-span-2"
           >
             <p className="absolute start-6 bottom-6 z-10 transition font-semibold text-2xl text-white">
-              Freight Domestic / International
+              Sea Freight Forwarding
             </p>
 
             <Image
@@ -47,11 +47,43 @@ export default function LinkServices() {
             />
           </Link>
           <Link
-            href="/services/transportation"
-            className="group relative block overflow-hidden bg-darkpint"
+            href="/services/trucking"
+            className="group relative block overflow-hidden bg-darkpint col-span-2"
           >
             <p className="absolute start-6 bottom-6 z-10 transition font-semibold text-2xl text-white">
-              Transportation
+              Trucking
+            </p>
+
+            <Image
+              src="/images/trucking.png"
+              alt="link"
+              className="h-64 w-full object-cover duration-500 group-hover:scale-105 sm:h-96 opacity-90 transition-all group-hover:opacity-30"
+              width={1080}
+              height={1080}
+            />
+          </Link>
+          <Link
+            href="/services/cargoinsurance"
+            className="group relative block overflow-hidden bg-darkpint col-span-3"
+          >
+            <p className="absolute start-6 bottom-6 z-10 transition font-semibold text-2xl text-white">
+              Cargo Insurance Brokerage
+            </p>
+
+            <Image
+              src="/images/cargo.webp"
+              alt="link"
+              className="h-64 w-full object-cover duration-500 group-hover:scale-105 sm:h-96 opacity-90 transition-all group-hover:opacity-30"
+              width={1080}
+              height={1080}
+            />
+          </Link>
+          <Link
+            href="/services/transportation"
+            className="group relative block overflow-hidden bg-darkpint col-span-3"
+          >
+            <p className="absolute start-6 bottom-6 z-10 transition font-semibold text-2xl text-white">
+              Intermodal & Multimodal Transportation
             </p>
 
             <Image

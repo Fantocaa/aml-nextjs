@@ -1,8 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-export default function SidebarClearance() {
+export default function SidebarTrucking() {
   return (
     <>
       <div className="mx-auto max-w-screen-xl px-4 sm:px-8">
@@ -13,7 +19,7 @@ export default function SidebarClearance() {
                 <li>
                   <Link
                     href="/services/customclearance"
-                    className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
+                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Custom Clearance
                   </Link>
@@ -31,7 +37,7 @@ export default function SidebarClearance() {
                 <li>
                   <Link
                     href="/services/trucking"
-                    className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                    className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
                   >
                     Trucking
                   </Link>
@@ -55,22 +61,22 @@ export default function SidebarClearance() {
               </ul>
             </div>
           </div>
-          <div className="py-12 md:pl-8 border-l">
+          <div className="py-12 md:pl-8 w-full border-l">
             <Image
-              src="/images/clearance.webp"
+              src="/images/trucking.png"
               alt="clearance"
               width={1080}
               height={1080}
-              className="h-80 object-cover w-full"
+              className="h-80 object-cover object-center w-full"
             />
-            <h1 className="text-4xl font-semibold pt-8 pb-4">
-              Custom Clearance
-            </h1>
-            <p className="">
-              Kami menyediakan jasa pengurusan kepabeanan (Bea Cukai) untuk
-              pengiriman barang export & import via laut dan udara karena kami
-              memiliki lisensi resmi sebagai Pengusaha Pengurusan Jasa
-              Kepabeanan (PPJK). Semua proses pengerjaan dilakukan secara resmi.
+            <h1 className="text-4xl font-semibold pt-8 pb-4">Trucking</h1>
+            <p>
+              In order to complete our range of total logistic service provider,
+              Uniair Cargo offers a full range of trucking services to our
+              customers from and to major cities in Java Island, and also in
+              other cities outside Java Island.
+              <br />
+              <br />
             </p>
           </div>
         </div>
