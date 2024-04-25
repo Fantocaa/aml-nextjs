@@ -50,7 +50,7 @@ const Footer = () => {
                   </a>
                 </li> */}
 
-                <li>
+                {/* <li>
                   <Link
                     href="https://www.instagram.com/pintindonesialogistik?igsh=MWtyMDRvZWFyMGNqdg=="
                     rel="noreferrer"
@@ -87,7 +87,7 @@ const Footer = () => {
                       height={22}
                     />
                   </a>
-                </li>
+                </li> */}
 
                 {/* <li>
                   <a
@@ -177,16 +177,32 @@ const Footer = () => {
                       className="text-gray-400 transition hover:text-gray-400/75"
                       href="/services/freight"
                     >
-                      Freight Domestic / International
+                      Sea Freight Forwarding
                     </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
+                      className="text-gray-400 transition hover:text-gray-400/75"
+                      href="/services/trucking"
+                    >
+                      Trucking
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-gray-400 transition hover:text-gray-400/75"
+                      href="/services/cargoinsurance"
+                    >
+                      Cargo Insurance Brokerage
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       className="text-gray-400 transition hover:text-gray-400/75"
                       href="/services/transportation"
                     >
-                      Transportation
-                    </a>
+                      Intermodal & Multimodal Transportation
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -200,6 +216,15 @@ const Footer = () => {
                   <li>
                     <Link
                       className="text-gray-400 transition hover:text-gray-400/75"
+                      href="/"
+                    >
+                      Home
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-gray-400 transition hover:text-gray-400/75"
                       href="/about"
                     >
                       About
@@ -207,12 +232,30 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <a
+                    <Link
                       className="text-gray-400 transition hover:text-gray-400/75"
                       href="/services"
                     >
                       Services
-                    </a>
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-gray-400 transition hover:text-gray-400/75"
+                      href="/location"
+                    >
+                      Location
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      className="text-gray-400 transition hover:text-gray-400/75"
+                      href="https://karier.tako.co.id/"
+                    >
+                      Careers
+                    </Link>
                   </li>
 
                   {/* <li>
@@ -334,7 +377,7 @@ const Footer = () => {
                 </a>
               </p> */}
 
-              <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
+              <p className="mt-4 text-sm text-gray-200 sm:order-first sm:mt-0">
                 Copyright &copy; {currentYear}. PT. ANUGERAH MULTI LOGISTIK.
               </p>
             </div>
