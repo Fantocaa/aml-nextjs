@@ -4,19 +4,47 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { motion, useAnimation } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { LucideMail } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
+  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
-import { LucideMail } from "lucide-react";
+
+const components: {
+  title: string;
+  href: string;
+  description: string;
+}[] = [
+  {
+    title: "Domestic Market",
+    href: "/domestic",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "International Market",
+    href: "/international",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+];
+
+const NavLinks = [
+  { id: 1, name: "Home", path: "/" },
+  { id: 2, name: "About", path: "/about" },
+  { id: 3, name: "Services", path: "/services" },
+  // { id: 4, name: "Tracking", path: "/tracking" },
+];
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -56,7 +84,7 @@ const Navbar = () => {
     visible: { y: 0, opacity: 1 },
   };
 
-  // Jalankan animasi menggunakan Framer Motion controls
+  // Jalankan animasi menggunakan Framer Motion controlsl
   useEffect(() => {
     if (isVisible) {
       controls.start("visible");
@@ -74,6 +102,9 @@ const Navbar = () => {
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
+
+  const pathname = usePathname();
+  const isActive = (path: string) => path === pathname;
 
   return (
     <>
@@ -122,64 +153,59 @@ const Navbar = () => {
                 </button>
               </div>
 
-              <div className="hidden md:block">
-                <nav aria-label="Global">
-                  <ul className="flex items-center gap-6 text-sm">
-                    <li>
-                      <Link href="/">
-                        <Button
-                          variant="link"
-                          className="text-darkpint hover:text-greenaml-500/75"
+              <NavigationMenu className="hidden md:block">
+                <NavigationMenuList>
+                  {NavLinks.map((link) => (
+                    <NavigationMenuItem key={link.id}>
+                      <Link
+                        href={link.path}
+                        className={isActive(link.path) ? "active" : ""}
+                        legacyBehavior
+                        passHref
+                      >
+                        <NavigationMenuLink
+                          className={`${navigationMenuTriggerStyle()} ${
+                            isActive(link.path)
+                              ? "active bg-greenaml-100 hover:bg-greenaml-200 font-semibold"
+                              : "font-medium bg-transparent text-darkpint"
+                          }`}
                         >
-                          Home
-                        </Button>
+                          {link.name}
+                        </NavigationMenuLink>
                       </Link>
-                    </li>
-
-                    <li>
-                      <Link href="/about">
-                        <Button
-                          variant="link"
-                          className="text-darkpint hover:text-greenaml-500/75"
-                        >
-                          About
-                        </Button>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link href="/services">
-                        <Button
-                          variant="link"
-                          className="text-darkpint hover:text-greenaml-500/75"
-                        >
-                          Services
-                        </Button>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/location">
-                        <Button
-                          variant="link"
-                          className="text-darkpint hover:text-greenaml-500/75"
-                        >
-                          Location
-                        </Button>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="https://karier.tako.co.id/" target="__blank">
-                        <Button
-                          variant="link"
-                          className="text-darkpint hover:text-greenaml-500/75"
-                        >
-                          Careers
-                        </Button>
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+                    </NavigationMenuItem>
+                  ))}
+                  {/* Menyisipkan komponen "Location" di antara "Services" dan "Careers" */}
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="font-medium bg-transparent text-darkpint">
+                      Location
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="w-[400px] gap-3 p-4 md:w-[500px] lg:w-[200px]">
+                        {components.map((component) => (
+                          <ListItem
+                            key={component.title}
+                            title={component.title}
+                            href={component.href}
+                          />
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  {/* Menambahkan "Careers" setelah "Location" */}
+                  <NavigationMenuItem>
+                    <Link
+                      href="https://karier.tako.co.id/"
+                      passHref
+                      target="__blank"
+                    >
+                      <h1 className="font-medium text-sm bg-transparent text-darkpint ">
+                        Careers
+                      </h1>
+                    </Link>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
 
               <div className="md:flex items-center gap-4 hidden">
                 <div className="sm:flex sm:gap-4">
@@ -204,7 +230,7 @@ const Navbar = () => {
       {isOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-40" // Pastikan z-index lebih rendah dari sidebar
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={() => setIsOpen(false)}
           ></div>
           <motion.div
@@ -214,7 +240,7 @@ const Navbar = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="md:hidden fixed inset-0 overflow-hidden z-50"
           >
-            <div className="relative w-64 h-full bg-blueaml-500 shadow-xl">
+            {/* <div className="relative w-64 h-full bg-blueaml-500 shadow-xl">
               <div className="flex items-center justify-between p-4 py-[18px] border-b border-gray-200">
                 <Link className="block text-teal-600" href="/">
                   <span className="sr-only">Home</span>
@@ -301,7 +327,142 @@ const Navbar = () => {
                   </svg>
                   Services
                 </Link>
+                <Link
+                  href="https://karier.tako.co.id/"
+                  className="flex items-center p-2 text-white hover:bg-greenaml-500 rounded"
+                >
+                  <svg
+                    className="w-6 h-6 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"
+                    />
+                  </svg>
+                  Careers
+                </Link>
               </nav>
+            </div> */}
+
+            <div className="flex h-screen flex-col justify-between border-e bg-white w-1/2 ">
+              <div className="px-4 py-6">
+                <div className="flex justify-between">
+                  <Link className="block text-teal-600" href="/">
+                    <span className="sr-only">Home</span>
+                    <Image
+                      src="/images/amlwhite.png"
+                      alt="logo"
+                      width={64}
+                      height={64}
+                      className="w-16 md:w-40"
+                    />
+                  </Link>
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="text-darkpint"
+                  >
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <ul className="mt-6 space-y-1">
+                  <li>
+                    <Link
+                      href="/"
+                      // className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
+                      className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                    >
+                      Home
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href="/about"
+                      className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                    >
+                      About
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href="/services"
+                      className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                    >
+                      Services
+                    </Link>
+                  </li>
+                  <li>
+                    <details className="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        <span className="text-sm font-medium"> Location </span>
+
+                        <span className="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul className="mt-2 space-y-1 px-4">
+                        <li>
+                          <Link
+                            href="/domestic"
+                            className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          >
+                            Domestic Market
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            href="/international"
+                            className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                          >
+                            International Market
+                          </Link>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://karier.tako.co.id/"
+                      target="__blank"
+                      className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                    >
+                      Careers
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </motion.div>
         </>
@@ -334,7 +495,7 @@ const Navbar = () => {
                       height={24}
                     />
                     <button className="text-sm text-gray-800 text-left">
-                      Cabang Surabaya
+                      HQ Surabaya
                     </button>
                   </div>
                 </Link>
@@ -348,7 +509,7 @@ const Navbar = () => {
                       height={24}
                     />
                     <button className="text-sm text-gray-800 text-left">
-                      Cabang Semarang
+                      Branch Semarang
                     </button>
                   </div>
                 </Link>
@@ -357,43 +518,6 @@ const Navbar = () => {
           )}
         </div>
       </div>
-
-      {/* </Link> */}
-
-      {/* <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Home
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/about" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                About Us
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/docs" title="Introduction">
-                  Re-usable components built using Radix UI and Tailwind CSS.
-                </ListItem>
-                <ListItem href="/docs/installation" title="Installation">
-                  How to install dependencies and structure your app.
-                </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Typography">
-                  Styles for headings, paragraphs, lists...etc
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu> */}
     </>
   );
 };

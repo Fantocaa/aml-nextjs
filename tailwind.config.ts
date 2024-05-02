@@ -55,6 +55,7 @@ const config = {
         },
         darkpint: "#1E1E1E",
         bgwhitepint: "#F7F7F7",
+        bgwhiteaml: "#FEFEFE",
         // bluepint: {
         //   100: "#7A8CFF",
         //   200: "#5873FF",
