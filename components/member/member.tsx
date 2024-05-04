@@ -17,7 +17,7 @@ export default function Member() {
             <div className="z-50 bg-white p-4 text-darkpint shadow-xl md:py-8 group-hover:bg-greenaml-500 group-hover:text-white transition-colors duration-200">
               <h2 className="text-sm">Manager</h2>
               <h1 className="text-md md:text-xl font-semibold pt-1">
-                Bessie Cooper
+                Debora Magdalena Syintha
               </h1>
             </div>
           </div>
