@@ -499,7 +499,10 @@ const Navbar = () => {
                     </button>
                   </div>
                 </Link>
-                <Link href="https://wa.link/8ocpit" target="__blank">
+                <Link
+                  href="https://api.whatsapp.com/send?phone=6282322219073"
+                  target="__blank"
+                >
                   <div className="flex items-center hover:bg-gray-200 px-4 py-2 gap-2">
                     {/* <LucideGlobe /> */}
                     <Image
