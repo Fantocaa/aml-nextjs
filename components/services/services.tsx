@@ -29,7 +29,16 @@ const Services = () => {
               <CarouselItem className="h-full">
                 <Image
                   alt=""
-                  src="/images/Frame 2.png"
+                  src="/images/Frame 2.webp"
+                  className="h-full w-full object-cover object-right-bottom"
+                  width={500}
+                  height={500}
+                />
+              </CarouselItem>
+              <CarouselItem>
+                <Image
+                  alt=""
+                  src="/images/Frame-237.webp"
                   className="h-full w-full object-cover"
                   width={500}
                   height={500}
@@ -38,16 +47,7 @@ const Services = () => {
               <CarouselItem>
                 <Image
                   alt=""
-                  src="/images/Frame 2.png"
-                  className="h-full w-full object-cover"
-                  width={500}
-                  height={500}
-                />
-              </CarouselItem>
-              <CarouselItem>
-                <Image
-                  alt=""
-                  src="/images/Frame 2.png"
+                  src="/images/Frame-238 (1).webp"
                   className="h-full w-full object-cover"
                   width={500}
                   height={500}

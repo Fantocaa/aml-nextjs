@@ -22,7 +22,7 @@ export default function Header() {
       <div
         className="lg:px-8 py-32"
         style={{
-          backgroundImage: "url('/images/Frame 2.png')",
+          backgroundImage: "url('/images/Frame-236 (1).webp')",
           backgroundSize: "cover",
           backgroundPosition: "bottom",
           backgroundPositionY: "75%",

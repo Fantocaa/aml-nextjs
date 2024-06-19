@@ -29,7 +29,7 @@ const Cta = () => {
         <div
           className="lg:py-24 flex items-center relative"
           style={{
-            backgroundImage: "url('/images/Frame 2.png')",
+            backgroundImage: "url('/images/Frame 2.webp)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

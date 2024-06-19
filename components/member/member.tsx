@@ -30,7 +30,7 @@ export default function Member() {
               width={1080}
               height={1080}
             />
-            <div className="z-50 bg-white p-4 text-darkpint shadow-xl md:py-8 group-hover:bg-greenaml-500 group-hover:text-white transition-colors duration-200">
+            <div className="z-50 bg-white p-4 text-darkpint shadow-xl md:py-8 md:pb-[60px] group-hover:bg-greenaml-500 group-hover:text-white transition-colors duration-200">
               <h2 className="text-sm">Manager</h2>
               <h1 className="text-base md:text-xl font-semibold pt-1">
                 Ricky Reza

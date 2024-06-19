@@ -27,7 +27,7 @@ const Header = () => {
           <CarouselItem className="h-full">
             <Image
               alt="hero"
-              src="/images/Frame 2.png"
+              src="/images/Frame 2.webp"
               className="h-full w-full object-cover"
               width={2560}
               height={2560}
@@ -36,7 +36,7 @@ const Header = () => {
           <CarouselItem>
             <Image
               alt="hero"
-              src="/images/Frame 2.png"
+              src="/images/Frame-235 (1).webp"
               className="h-full w-full object-cover"
               width={2560}
               height={2560}
@@ -45,7 +45,7 @@ const Header = () => {
           <CarouselItem>
             <Image
               alt="hero"
-              src="/images/Frame 2.png"
+              src="/images/Frame-234 (1).webp"
               className="h-full w-full object-cover"
               width={2560}
               height={2560}

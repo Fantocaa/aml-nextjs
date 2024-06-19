@@ -30,7 +30,7 @@ export default function Specialist() {
       <div
         className="lg:px-8 relative"
         style={{
-          backgroundImage: "url('/images/Frame 2.png')",
+          backgroundImage: "url('/images/Frame 2.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
