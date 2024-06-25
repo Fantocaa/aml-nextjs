@@ -42,10 +42,10 @@ export default function Specialist() {
               <h1 className="text-4xl font-bold max-w-md text-darkpint">
                 Specialist for transportation.
               </h1>
-              <p className="py-4 max-w-md text-gray-500">
-                We provide comprehensive transportation services for our
-                partners on the globe and always offer innovative solutions to
-                deal with complex logistics challenges.
+              <p className="py-4 max-w-lg text-gray-500 text-lg">
+                Kami menyediakan layanan transportasi komprehensif bagi mitra
+                kami di seluruh dunia dan selalu menawarkan solusi inovatif
+                untuk menghadapi tantangan logistik yang kompleks.
               </p>
               <Link href="/about">
                 <Button className="bg-blueaml-500 text-white hover:bg-white hover:text-blueaml-500 hover:border hover:border-blueaml-500">

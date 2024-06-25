@@ -14,7 +14,7 @@ export default function Member() {
               width={1080}
               height={1080}
             />
-            <div className="z-50 bg-white p-4 text-darkpint shadow-xl md:py-8 group-hover:bg-greenaml-500 group-hover:text-white transition-colors duration-200">
+            <div className="z-50 bg-white p-4 text-darkpint shadow-xl md:py-8 md:pb-8 group-hover:bg-greenaml-500 group-hover:text-white transition-colors duration-200">
               <h2 className="text-sm">Manager</h2>
               <h1 className="text-md md:text-xl font-semibold pt-1">
                 Debora Magdalena Syintha
@@ -39,10 +39,10 @@ export default function Member() {
           </div>
 
           <div className="group relative block col-span-2 p-0 md:p-24 order-first md:order-last">
-            <h1 className="text-4xl font-semibold">
+            <h1 className="text-4xl font-bold">
               Our talent and professional members
             </h1>
-            <p className="pt-6 text-gray-600">
+            <p className="pt-6 text-gray-600 text-lg">
               Meet friendly, experienced, knowledgeable and dynamic team members
               who always make our customers pleased with.
             </p>

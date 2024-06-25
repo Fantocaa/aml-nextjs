@@ -1,5 +1,13 @@
 import Image from "next/image";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Domestic Market | Reach To All Corners of The World With Us | PT. ANUGERAH MULTI LOGISTIK",
+  description:
+    "Menjadi perusahaan Logistik Export dan Import terbaik yang terkemuka, terpercaya, dan handal dengan mengutamakan kepercayaan dan kepuasan Customer",
+};
 
 export default function Domestic() {
   return (

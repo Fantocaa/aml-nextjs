@@ -64,7 +64,7 @@ const Services = () => {
             <div className="p-4 sm:p-16 lg:p-16">
               <h2 className="text-2xl font-bold sm:text-3xl">Our Services</h2>
 
-              <p className="mt-4 text-gray-300">
+              <p className="mt-4 text-gray-300 max-w-xl text-lg">
                 Pelayanan unggul kami mencakup segala kebutuhan Anda, dari
                 pengiriman cepat hingga layanan konsultasi yang komprehensif.
               </p>

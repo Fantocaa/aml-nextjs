@@ -29,17 +29,17 @@ const Cta = () => {
         <div
           className="lg:py-24 flex items-center relative"
           style={{
-            backgroundImage: "url('/images/Frame 2.webp)",
+            backgroundImage: "url('/images/Frame 2.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
           <div className="text-left ltr:sm:text-left rtl:sm:text-right p-8 md:p-12 z-10">
-            <h2 className="text-2xl font-bold text-white md:text-4xl">
+            <h2 className="text-2xl font-bold text-white md:text-6xl lg:max-w-md">
               Get in touch with us
             </h2>
 
-            <p className="hidden text-gray-400 md:mt-4 md:block max-w-md">
+            <p className="hidden text-gray-400 md:mt-8 text-lg md:block max-w-md">
               Kami selalu ada untuk menjawab pertanyaan Anda, memberikan
               informasi lebih lanjut, atau membantu Anda dengan kebutuhan
               logistik Anda. Jangan ragu untuk menghubungi kami!

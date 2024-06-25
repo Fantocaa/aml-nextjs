@@ -6,6 +6,14 @@ import Services from "@/components/services/services";
 import Cta from "@/components/cta/cta";
 import Specialist from "@/components/specialist/specialist";
 import Member from "@/components/member/member";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Home | Reach To All Corners of The World With Us | PT. ANUGERAH MULTI LOGISTIK",
+  description:
+    "Menjadi perusahaan Logistik Export dan Import terbaik yang terkemuka, terpercaya, dan handal dengan mengutamakan kepercayaan dan kepuasan Customer",
+};
 
 export default function Home() {
   return (
