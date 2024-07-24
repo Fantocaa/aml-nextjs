@@ -1,14 +1,16 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import LocaleLink from "../locale-link";
+import { useTranslations } from "next-intl";
 
 export default function SidebarFreight() {
+  const t = useTranslations("Services");
   return (
     <>
       <div className="mx-auto max-w-screen-xl px-4 sm:px-8">
@@ -17,46 +19,46 @@ export default function SidebarFreight() {
             <div className="pr-8 py-6">
               <ul className="mt-6 space-y-1">
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/customclearance"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Custom Clearance
-                  </Link>
+                  </LocaleLink>
                 </li>
 
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/freight"
                     className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
                   >
                     Sea Freight Forwarding
-                  </Link>
+                  </LocaleLink>
                 </li>
 
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/trucking"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Trucking
-                  </Link>
+                  </LocaleLink>
                 </li>
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/cargoinsurance"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Cargo Insurance Brokerage
-                  </Link>
+                  </LocaleLink>
                 </li>
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/transportation"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Intermodal & Multimodal Transportation
-                  </Link>
+                  </LocaleLink>
                 </li>
               </ul>
             </div>
@@ -73,13 +75,15 @@ export default function SidebarFreight() {
               Sea Freight Forwarding
             </h1>
             <p>
-              Jaringan kami juga tersebar di seluruh nusantara & memiliki
+              {/* Jaringan kami juga tersebar di seluruh nusantara & memiliki
               kerjasama dengan agent-agent dari seluruh dunia. Tentunya harga
-              yang kami tawarkan akan sangat kompetitif
+              yang kami tawarkan akan sangat kompetitif */}
+              {t("content-sea-1")}
               <br />
               <br />
-              Service dalam Freight Domestic / International yang kami berikan
-              bisa meliputi :
+              {/* Service dalam Freight Domestic / International yang kami berikan
+              bisa meliputi : */}
+              {t("content-sea-2")}
               <br />
               <br />
             </p>
@@ -90,45 +94,49 @@ export default function SidebarFreight() {
                   International & Domestic Freight Forwarding
                 </AccordionTrigger>
                 <AccordionContent>
-                  Kami menawarkan jasa pengiriman yang lengkap yaitu door to
+                  {/* Kami menawarkan jasa pengiriman yang lengkap yaitu door to
                   door. Pengambilan barang dari gudang di negara asal dan
                   dikirimkan dengan di gudang penerima di negara tujuan. Service
                   ini pun dapat dikombinasi baik import dilanjutkan ke
-                  pengiriman lokas begitu juga sebaliknya untuk export.
+                  pengiriman lokas begitu juga sebaliknya untuk export. */}
+                  {t("content-sea-3")}
                   <br />
                   <br />
-                  Semua pengiriman dapat dilakukan baik menggunakan kapal laut
-                  maupun pesawat.
+                  {/* Semua pengiriman dapat dilakukan baik menggunakan kapal laut
+                  maupun pesawat. */}
+                  {t("content-sea-4")}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
                 <AccordionTrigger>LCL & FCL Services</AccordionTrigger>
                 <AccordionContent>
-                  Kami dapat melayani pengiriman dalam jumlah besar yaitu FCL
+                  {/* Kami dapat melayani pengiriman dalam jumlah besar yaitu FCL
                   (Full Container Load) artinya dalam 1 container hanya memiliki
-                  1 penerima atau 1 pengiriman barang.
+                  1 penerima atau 1 pengiriman barang. */}
+                  {t("content-sea-5")}
                   <br />
                   <br />
-                  Selain itu kami juga melayani LCL (Less Container Load)
+                  {/* Selain itu kami juga melayani LCL (Less Container Load)
                   artinya pengiriman dalam jumlah kecil biasanya perhitungan
-                  dalam kubikasi volume / berat tonase
+                  dalam kubikasi volume / berat tonase */}
+                  {t("content-sea-6")}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
                 <AccordionTrigger>Dangerous Goods Handling</AccordionTrigger>
-                <AccordionContent>Meong</AccordionContent>
+                <AccordionContent>{t("content-sea-7")}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
                 <AccordionTrigger>Break Bulk Cargo</AccordionTrigger>
-                <AccordionContent>Meong</AccordionContent>
+                <AccordionContent>{t("content-sea-8")}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
                 <AccordionTrigger>Consolidated Ocean Freight</AccordionTrigger>
-                <AccordionContent>Meong</AccordionContent>
+                <AccordionContent>{t("content-sea-9")}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-6">
                 <AccordionTrigger>Door to Seaport</AccordionTrigger>
-                <AccordionContent>Meong</AccordionContent>
+                <AccordionContent>{t("content-sea-10")}</AccordionContent>
               </AccordionItem>
             </Accordion>
           </div>

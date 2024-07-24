@@ -3,20 +3,29 @@ import Header from "@/components/servicepage/header";
 import LinkServices from "@/components/servicepage/linkservices";
 import Specialist from "@/components/specialist/specialist";
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title:
-    "Services | Reach To All Corners of The World With Us | PT. ANUGERAH MULTI LOGISTIK",
-  description:
-    "Menjadi perusahaan Logistik Export dan Import terbaik yang terkemuka, terpercaya, dan handal dengan mengutamakan kepercayaan dan kepuasan Customer",
-};
+interface Params {
+  params: {
+    locale: string;
+  };
+}
+
+export async function generateMetadata({ params: { locale } }: Params) {
+  const t = await getTranslations({ locale, namespace: "MetadataServices" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 const Services = () => {
   return (
     <>
       <Header />
       <LinkServices />
-      <Specialist />
+      {/* <Specialist /> */}
     </>
   );
 };

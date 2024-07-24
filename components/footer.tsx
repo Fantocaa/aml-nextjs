@@ -1,9 +1,45 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import LocaleLink from "./locale-link";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const t = useTranslations("Navigation-Bar");
+
+  const Navlinks = [
+    {
+      category: `${t("layanan")}`,
+      links: [
+        { id: 1, name: "Custom Clearance", link: "/services/customclearance" },
+        { id: 2, name: "Sea Freight Forwarding", link: "/services/freight" },
+        { id: 3, name: "Trucking", link: "/services/trucking" },
+        {
+          id: 4,
+          name: "Cargo Insurance Brokerage",
+          link: "/services/cargoinsurance",
+        },
+        {
+          id: 5,
+          name: "Intermodal & Multimodal Transportation",
+          link: "/services/transportation",
+        },
+      ],
+    },
+    {
+      category: `${t("link")}`,
+      links: [
+        { id: 1, name: `${t("home")}`, link: "/" },
+        { id: 2, name: `${t("about")}`, link: "/about" },
+        { id: 3, name: `${t("service")}`, link: "/services" },
+        { id: 4, name: "Domestic", link: "/domestic" },
+        { id: 5, name: "International", link: "/international" },
+        { id: 6, name: `${t("career")}`, link: "https://karier.tako.co.id/" },
+      ],
+    },
+  ];
+
   return (
     <>
       <footer className="bg-darkpint">
@@ -21,139 +57,47 @@ const Footer = () => {
               </div>
 
               <p className="mt-6 text-center max-w-md leading-relaxed text-gray-400 sm:text-left">
-                Menjadi perusahaan Logistik Export dan Import terbaik yang
-                terkemuka, terpercaya, dan handal dengan mengutamakan
-                kepercayaan dan kepuasan Customer.
+                {t("footer")}
               </p>
 
               <ul className="mt-4 md:mt-8 flex justify-center gap-6 sm:justify-start md:gap-8"></ul>
             </div>
-
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:col-span-3">
-              <div className="text-left sm:text-left col-span-2 md:col-span-1 md:col-start-2">
-                <p className="text-lg font-medium text-gray-200">
-                  Our Services
-                </p>
-
-                <ul className="mt-4 md:mt-8 space-y-4 text-sm">
-                  <li>
-                    <Link
-                      className="text-gray-400 transition hover:text-gray-400/75"
-                      href="/services/customclearance"
-                    >
-                      Custom Clearance
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-400 transition hover:text-gray-400/75"
-                      href="/services/freight"
-                    >
-                      Sea Freight Forwarding
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-gray-400 transition hover:text-gray-400/75"
-                      href="/services/trucking"
-                    >
-                      Trucking
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-gray-400 transition hover:text-gray-400/75"
-                      href="/services/cargoinsurance"
-                    >
-                      Cargo Insurance Brokerage
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="text-gray-400 transition hover:text-gray-400/75"
-                      href="/services/transportation"
-                    >
-                      Intermodal & Multimodal Transportation
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="text-left sm:text-left">
-                <p className="text-lg font-medium text-gray-200">
-                  Helpful Links
-                </p>
-
-                <ul className="mt-8 space-y-4 text-sm">
-                  <li>
-                    <Link
-                      className="text-gray-400 transition hover:text-gray-400/75"
-                      href="/"
-                    >
-                      Home
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-400 transition hover:text-gray-400/75"
-                      href="/about"
-                    >
-                      About
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-400 transition hover:text-gray-400/75"
-                      href="/services"
-                    >
-                      Services
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-400 transition hover:text-gray-400/75"
-                      href="/domestic"
-                    >
-                      Domestic
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-400 transition hover:text-gray-400/75"
-                      href="/international"
-                    >
-                      International
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-400 transition hover:text-gray-400/75"
-                      href="https://karier.tako.co.id/"
-                    >
-                      Careers
-                    </Link>
-                  </li>
-
-                  {/* <li>
-                    <a
-                      className="group flex justify-start gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                      href="#"
-                    >
-                      <span className="text-gray-400 transition group-hover:text-gray-400/75">
-                        FAQs
-                      </span>
-
-                      
-                    </a>
-                  </li> */}
-                </ul>
-              </div>
+              {Navlinks.map((categoryItem, index) => (
+                <div
+                  key={categoryItem.category}
+                  className={`text-left sm:text-left col-span-2 md:col-span-1 ${
+                    index === 0 ? "md:col-start-2" : ""
+                  }`}
+                >
+                  <p className="text-lg font-medium text-gray-200">
+                    {categoryItem.category}
+                  </p>
+                  <ul className="mt-4 md:mt-8 space-y-4 text-sm">
+                    {categoryItem.links.map((linkItem) => (
+                      <li key={linkItem.id}>
+                        {linkItem.link.startsWith("https") ? (
+                          <Link
+                            className="text-gray-400 transition hover:text-gray-400/75"
+                            href={linkItem.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {linkItem.name}
+                          </Link>
+                        ) : (
+                          <LocaleLink
+                            className="text-gray-400 transition hover:text-gray-400/75"
+                            href={linkItem.link}
+                          >
+                            {linkItem.name}
+                          </LocaleLink>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
 

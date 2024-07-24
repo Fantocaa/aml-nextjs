@@ -7,8 +7,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import LocaleLink from "../locale-link";
+import { useTranslations } from "next-intl";
 
 export default function SidebarCargo() {
+  const t = useTranslations("Services");
   return (
     <div>
       <div className="mx-auto max-w-screen-xl px-4 sm:px-8">
@@ -17,46 +20,46 @@ export default function SidebarCargo() {
             <div className="pr-8 py-6">
               <ul className="mt-6 space-y-1">
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/customclearance"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Custom Clearance
-                  </Link>
+                  </LocaleLink>
                 </li>
 
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/freight"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Sea Freight Forwarding
-                  </Link>
+                  </LocaleLink>
                 </li>
 
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/trucking"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Trucking
-                  </Link>
+                  </LocaleLink>
                 </li>
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/cargoinsurance"
                     className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
                   >
                     Cargo Insurance Brokerage
-                  </Link>
+                  </LocaleLink>
                 </li>
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/transportation"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Intermodal & Multimodal Transportation
-                  </Link>
+                  </LocaleLink>
                 </li>
               </ul>
             </div>
@@ -73,11 +76,12 @@ export default function SidebarCargo() {
               Cargo Insurance Brokerage
             </h1>
             <p>
-              Kami menyediakan layanan pengiriman via laut, udara, maupun darat
+              {/* Kami menyediakan layanan pengiriman via laut, udara, maupun darat */}
+              {t("content-cargo")}
               <br />
               <br />
             </p>
-            <Accordion type="single" defaultValue="item-1" collapsible>
+            {/* <Accordion type="single" defaultValue="item-1" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger>Air Freight</AccordionTrigger>
                 <AccordionContent>
@@ -119,7 +123,7 @@ export default function SidebarCargo() {
                   sulit dijangkau oleh transportasi pada umumnya.
                 </AccordionContent>
               </AccordionItem>
-            </Accordion>
+            </Accordion> */}
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-// "use client";
 import React from "react";
 import {
   Breadcrumb,
@@ -8,15 +7,11 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import LocaleLink from "../locale-link";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
+  const t = useTranslations("Services");
   return (
     <>
       <div
@@ -34,21 +29,21 @@ export default function Header() {
             <Breadcrumb className="pt-4">
               <BreadcrumbList>
                 <BreadcrumbItem>
-                  <BreadcrumbLink
+                  <LocaleLink
                     href="/"
                     className="text-white hover:text-white/75"
                   >
-                    Home
-                  </BreadcrumbLink>
+                    {t("header-2")}
+                  </LocaleLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="text-white" />
                 <BreadcrumbItem>
-                  <BreadcrumbLink
+                  <LocaleLink
                     href="/services"
                     className="text-white hover:text-white/75"
                   >
-                    Services
-                  </BreadcrumbLink>
+                    {t("header-1")}
+                  </LocaleLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="text-white" />
                 <BreadcrumbItem>

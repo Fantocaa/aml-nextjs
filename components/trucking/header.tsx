@@ -15,8 +15,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
+  const t = useTranslations("Services");
   return (
     <>
       <div
@@ -38,7 +40,7 @@ export default function Header() {
                     href="/"
                     className="text-white hover:text-white/75"
                   >
-                    Home
+                    {t("header-2")}
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="text-white" />
@@ -47,7 +49,7 @@ export default function Header() {
                     href="/services"
                     className="text-white hover:text-white/75"
                   >
-                    Services
+                    {t("header-1")}
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="text-white" />

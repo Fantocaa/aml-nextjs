@@ -1,14 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import LocaleLink from "../locale-link";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function SidebarTrucking() {
+  const t = useTranslations("Services");
   return (
     <>
       <div className="mx-auto max-w-screen-xl px-4 sm:px-8">
@@ -17,46 +20,46 @@ export default function SidebarTrucking() {
             <div className="pr-8 py-6">
               <ul className="mt-6 space-y-1">
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/customclearance"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Custom Clearance
-                  </Link>
+                  </LocaleLink>
                 </li>
 
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/freight"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Sea Freight Forwarding
-                  </Link>
+                  </LocaleLink>
                 </li>
 
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/trucking"
                     className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
                   >
                     Trucking
-                  </Link>
+                  </LocaleLink>
                 </li>
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/cargoinsurance"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Cargo Insurance Brokerage
-                  </Link>
+                  </LocaleLink>
                 </li>
                 <li>
-                  <Link
+                  <LocaleLink
                     href="/services/transportation"
                     className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     Intermodal & Multimodal Transportation
-                  </Link>
+                  </LocaleLink>
                 </li>
               </ul>
             </div>
@@ -70,14 +73,22 @@ export default function SidebarTrucking() {
               className="h-80 object-cover object-center w-full"
             />
             <h1 className="text-4xl font-semibold pt-8 pb-4">Trucking</h1>
-            <p>
-              In order to complete our range of total logistic service provider,
-              Uniair Cargo offers a full range of trucking services to our
-              customers from and to major cities in Java Island, and also in
-              other cities outside Java Island.
+            {/* <p>
+              Menjadi bagian dari holding{" "}
+              <Link
+                className="underline text-blue-500"
+                href="https://tako.co.id"
+                target="__blank"
+              >
+                PT.TAKO ANUGERAH KOPORASI
+              </Link>{" "}
+              membuat kami memiliki kekuatan armada yang dapat menunjang
+              pengerjaan logistik. Selain komitmen penyediaan trucking trailer,
+              kami juga berpengalaman menangani pengiriman via kereta api.
               <br />
               <br />
-            </p>
+            </p> */}
+            <p>{t("content-trucking")}</p>
           </div>
         </div>
       </div>

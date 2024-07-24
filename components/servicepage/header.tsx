@@ -15,8 +15,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useTranslations } from "next-intl";
+import LocaleLink from "../locale-link";
 
 export default function Header() {
+  const t = useTranslations("Services");
   return (
     <>
       <div
@@ -30,7 +33,7 @@ export default function Header() {
       >
         <div className="max-w-screen-xl px-4 md:px-2 2xl:px-8 mx-auto">
           <div className="flex justify-center flex-col text-white">
-            <h1 className=" text-3xl font-semibold">Services</h1>
+            <h1 className=" text-3xl font-semibold">{t("header-1")}</h1>
             <Breadcrumb className="pt-4">
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -38,7 +41,7 @@ export default function Header() {
                     href="/"
                     className="text-white hover:text-white/75"
                   >
-                    Home
+                    {t("header-2")}
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="text-white" />
@@ -50,12 +53,17 @@ export default function Header() {
                   {/* <BreadcrumbPage className="text-white">
                 About Us
               </BreadcrumbPage> */}
-                  <BreadcrumbLink
+                  {/* <BreadcrumbLink
+                    href="/services"
+                    className="text-white hover:text-white/75"
+                  > */}
+                  <LocaleLink
                     href="/services"
                     className="text-white hover:text-white/75"
                   >
-                    Services
-                  </BreadcrumbLink>
+                    {t("header-1")}
+                  </LocaleLink>
+                  {/* </BreadcrumbLink> */}
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
