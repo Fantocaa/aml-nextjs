@@ -90,7 +90,7 @@ const Cta = () => {
               60164
               <br />
               <br />
-              Branch: Jl. Puri Anjasmoro Blok J4, Tawangsari, KSemarang Barat,
+              Branch: Jl. Puri Anjasmoro Blok J4, Tawangsari, Semarang Barat,
               Kota Semarang 50144
             </p>
           </div>
