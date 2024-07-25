@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { locale } }: Params) {
   const t = await getTranslations({ locale, namespace: "MetadataHome" });
 
   return {
-    title: "Domestic Market",
+    title: t("international-meta"),
     description: t("description"),
   };
 }
