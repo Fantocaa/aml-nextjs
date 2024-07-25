@@ -104,7 +104,7 @@ export default function SidebarFreight() {
                   <br />
                   {/* Semua pengiriman dapat dilakukan baik menggunakan kapal laut
                   maupun pesawat. */}
-                  {t("content-sea-4")}
+                  {/* {t("content-sea-4")} */}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
@@ -119,7 +119,7 @@ export default function SidebarFreight() {
                   {/* Selain itu kami juga melayani LCL (Less Container Load)
                   artinya pengiriman dalam jumlah kecil biasanya perhitungan
                   dalam kubikasi volume / berat tonase */}
-                  {t("content-sea-6")}
+                  {/* {t("content-sea-6")} */}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
