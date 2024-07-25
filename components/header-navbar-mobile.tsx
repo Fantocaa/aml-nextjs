@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import LocaleLink from "./locale-link";
 
 interface NavLink {
   id: number;
@@ -34,7 +35,7 @@ export default function HeaderNavbarMobile({
         <div className="flex h-screen flex-col justify-between border-e bg-white w-1/2 ">
           <div className="px-4 py-6">
             <div className="flex justify-between">
-              <Link className="block text-teal-600" href="/">
+              <LocaleLink className="block text-teal-600" href="/">
                 <span className="sr-only">Home</span>
                 <Image
                   src="/images/amlwhite.png"
@@ -43,7 +44,7 @@ export default function HeaderNavbarMobile({
                   height={64}
                   className="w-16 md:w-40"
                 />
-              </Link>
+              </LocaleLink>
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-darkpint"
@@ -66,30 +67,33 @@ export default function HeaderNavbarMobile({
 
             <ul className="mt-6 space-y-1">
               <li>
-                <Link
+                <LocaleLink
                   href="/"
+                  // onClick={handleLinkClick}
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                 >
                   Home
-                </Link>
+                </LocaleLink>
               </li>
 
               <li>
-                <Link
+                <LocaleLink
                   href="/about"
+                  // onClick={handleLinkClick}
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                 >
                   About
-                </Link>
+                </LocaleLink>
               </li>
 
               <li>
-                <Link
+                <LocaleLink
                   href="/services"
+                  // onClick={handleLinkClick}
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                 >
                   Services
-                </Link>
+                </LocaleLink>
               </li>
               <li>
                 <details className="group [&_summary::-webkit-details-marker]:hidden">
@@ -114,21 +118,21 @@ export default function HeaderNavbarMobile({
 
                   <ul className="mt-2 space-y-1 px-4">
                     <li>
-                      <Link
+                      <LocaleLink
                         href="/domestic"
                         className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                       >
                         Domestic Market
-                      </Link>
+                      </LocaleLink>
                     </li>
 
                     <li>
-                      <Link
+                      <LocaleLink
                         href="/international"
                         className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                       >
                         International Market
-                      </Link>
+                      </LocaleLink>
                     </li>
                   </ul>
                 </details>

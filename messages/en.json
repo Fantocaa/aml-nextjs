@@ -24,13 +24,13 @@
     "efficiency": "Efficiency",
     "efficiency-sub": "We work quickly, accurately, and carefully with the team to deliver results that satisfy our customers.",
     "relation": "Relationship",
-    "relation-sub": "We ensure that we perform tasks well without errors for the best service to our customers.",
+    "relation-sub": "Always ready to be a customer solution and provide communicative and precise service which is the key to our cooperative relationship with customers.",
     "safety": "Safety",
-    "safety-sub": "We ensure that we perform tasks well without errors for the best service to our customers.",
+    "safety-sub": "In maintaining the trust that customers have placed in us, we ensure that each of your deliveries will be safe and in accordance with customer needs.",
     "nicely": "Nicely",
-    "nicely-sub": "We ensure that we perform tasks well without errors for the best service to our customers.",
+    "nicely-sub": "Ensure that every customer gets communicative information with friendly service. So as to create good relationships with all parties.",
     "reliability": "Reliability",
-    "reliability-sub": "We ensure that we perform tasks well without errors for the best service to our customers.",
+    "reliability-sub": "Providing training to human resources to improve service quality and reliability in carrying out work responsibilities that have been entrusted by customers.",
     "quote": "Being the first choice for international logistics solutions, we are ready to provide reliability and customer satisfaction every step of the way."
   },
   "Services-Home": {
@@ -54,6 +54,10 @@
   "MetadataAbout": {
     "title": "About | Reach To All Corners of The World With Us | PT. ANUGERAH MULTI LOGISTIK",
     "description": "Become the best leading, trusted and reliable Export and Import Logistics company by prioritizing customer trust and satisfaction"
+  },
+  "MetadataServices": {
+    "title": "Services | Reach To All Corners of The World With Us | PT. ANUGERAH MULTI LOGISTIK",
+    "description": "Menjadi perusahaan Logistik Export dan Import terbaik yang terkemuka, terpercaya, dan handal dengan mengutamakan kepercayaan dan kepuasan Customer"
   },
   "MetadataHome": {
     "title": "Home | Reach To All Corners of The World With Us | PT. ANUGERAH MULTI LOGISTIK",

@@ -189,7 +189,7 @@ export default function HeaderNavbar({
               </NavigationMenu>
 
               <div className="md:flex items-center gap-4 hidden">
-                <div className="sm:flex sm:gap-8 items-center">
+                <div className="sm:flex sm:gap-2 items-center">
                   <LocalSwitcher />
                   <LocaleLink href="/contact">
                     <Button

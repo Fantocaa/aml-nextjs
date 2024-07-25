@@ -46,7 +46,7 @@ const Footer = () => {
         <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-6">
             <div className="md:col-span-3">
-              <div className="flex justify-center text-white sm:justify-start items-center gap-2">
+              <div className="flex text-white justify-start items-center gap-2">
                 <Image
                   alt="logo"
                   src="/images/amlwhite.png"
@@ -56,7 +56,7 @@ const Footer = () => {
                 <h1 className="font-semibold">PT. ANUGERAH MULTI LOGISTIK</h1>
               </div>
 
-              <p className="mt-6 text-center max-w-md leading-relaxed text-gray-400 sm:text-left">
+              <p className="mt-6 max-w-md leading-relaxed text-gray-400 text-left">
                 {t("footer")}
               </p>
 

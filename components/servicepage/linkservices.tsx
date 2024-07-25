@@ -46,7 +46,9 @@ export default function LinkServices() {
             <LocaleLink
               href={content.link}
               className={`group relative block overflow-hidden bg-darkpint rounded-2xl ${
-                index >= ServiceLink.length - 2 ? "col-span-3" : "col-span-2"
+                index >= ServiceLink.length - 2
+                  ? "col-span-3"
+                  : "col-span-3 md:col-span-2"
               }`}
               key={content.name}
             >
