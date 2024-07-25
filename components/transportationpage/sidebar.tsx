@@ -84,44 +84,29 @@ export default function SidebarTransport() {
             <Accordion type="single" defaultValue="item-1" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger>Air Freight</AccordionTrigger>
-                <AccordionContent>
-                  Kami juga menyediakan Air Freight yang mencakup penanganan
-                  barang kiriman yang sensitif dan membutuhkan layanan secara
-                  cepat dan tepat yaitu via udara baik untuk wilayah Domestik
-                  ataupun Internasional.
-                </AccordionContent>
+                <AccordionContent>{t("content-intermodal-1")}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
                 <AccordionTrigger>Sea Freight</AccordionTrigger>
-                <AccordionContent>
-                  Kami dapat menyediakan Sea Freight dengan term mulai EXW
-                  (Ex-Work), FOB (Free On Board), CNF (Cost & Freight), & CIF
-                  (Cost Insurance & Freight) yang mana disesuaikan dengan
-                  kebutuhan anda. Freight yang kami sediakan baik untuk
-                  pengiriman domestik maupun internasional.
-                </AccordionContent>
+                <AccordionContent>{t("content-intermodal-2")}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
                 <AccordionTrigger>Trucking</AccordionTrigger>
                 <AccordionContent>
-                  Menjadi bagian dari holding{" "}
+                  {/* Menjadi bagian dari holding{" "}
                   <Link className="underline text-blue-500" href="tako.co.id">
                     PT.TAKO ANUGERAH KOPORASI
                   </Link>{" "}
                   membuat kami memiliki kekuatan armada yang dapat menunjang
                   pengerjaan logistik. Selain komitmen penyediaan trucking
                   trailer, kami juga berpengalaman menangani pengiriman via
-                  kereta api.
+                  kereta api. */}
+                  {t("content-trucking")}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
                 <AccordionTrigger>Multimoda</AccordionTrigger>
-                <AccordionContent>
-                  Salah satu keunggulan kami sebagai transporter adalah dapat
-                  mengatur pengiriman barang secara multimoda (kombinasi jenis
-                  transportasi) untuk pengiriman barang hingga ke daerah yang
-                  sulit dijangkau oleh transportasi pada umumnya.
-                </AccordionContent>
+                <AccordionContent>{t("content-intermodal-3")}</AccordionContent>
               </AccordionItem>
             </Accordion>
           </div>
