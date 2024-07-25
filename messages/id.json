@@ -5,6 +5,7 @@
     "service": "Layanan",
     "location": "Lokasi",
     "career": "Karier",
+    "contact": "Hubungi Kami",
     "link": "Tautan Lainnya",
     "layanan": "Layanan Kami",
     "footer": "Menjadi perusahaan Logistik Export dan Import terbaik yang terkemuka, terpercaya, dan handal dengan mengutamakan kepercayaan dan kepuasan Customer."
@@ -57,7 +58,8 @@
     "domestic-meta": "Domestic Market | Jangkau Penjuru Dunia Bersama Kami | PT. ANUGERAH MULTI LOGISTIK",
     "domestic": "Jelajahi layanan logistik terpadu kami untuk kebutuhan distribusi lokal Anda. Dengan jaringan yang luas di seluruh negeri, kami siap memberikan solusi efisien dan handal untuk mengelola pengiriman barang di dalam negeri.",
     "international-meta": "International Market | Jangkau Penjuru Dunia Bersama Kami | PT. ANUGERAH MULTI LOGISTIK",
-    "international": "Temukan solusi logistik global yang andal untuk kebutuhan pengiriman lintas negara Anda. Dengan pengalaman dan jaringan internasional yang kuat, kami siap membantu Anda mengelola pengiriman barang lintas batas dengan efisiensi dan kehandalan."
+    "international": "Temukan solusi logistik global yang andal untuk kebutuhan pengiriman lintas negara Anda. Dengan pengalaman dan jaringan internasional yang kuat, kami siap membantu Anda mengelola pengiriman barang lintas batas dengan efisiensi dan kehandalan.",
+    "contact": "Contact | Jangkau Penjuru Dunia Bersama Kami | PT. ANUGERAH MULTI LOGISTIK"
   },
   "MetadataAbout": {
     "title": "Tentang Kami | Jangkau Penjuru Dunia Bersama Kami | PT. ANUGERAH MULTI LOGISTIK",
@@ -67,7 +69,6 @@
     "title": "Layanan | Jangkau Penjuru Dunia Bersama Kami | PT. ANUGERAH MULTI LOGISTIK",
     "description": "Menjadi perusahaan Logistik Export dan Import terbaik yang terkemuka, terpercaya, dan handal dengan mengutamakan kepercayaan dan kepuasan Customer"
   },
-
   "About": {
     "header-1": "Tentang Kami",
     "header-2": "Beranda",
@@ -104,5 +105,9 @@
     "content-intermodal-1": "Kami juga menyediakan Air Freight yang mencakup penanganan barang kiriman yang sensitif dan membutuhkan layanan secara cepat dan tepat yaitu via udara baik untuk wilayah Domestik ataupun Internasional.",
     "content-intermodal-2": "Kami dapat menyediakan Sea Freight dengan term mulai EXW (Ex-Work), FOB (Free On Board), CNF (Cost & Freight), & CIF (Cost Insurance & Freight) yang mana disesuaikan dengan kebutuhan anda. Freight yang kami sediakan baik untuk pengiriman domestik maupun internasional.",
     "content-intermodal-3": "Salah satu keunggulan kami sebagai transporter adalah dapat mengatur pengiriman barang secara multimoda (kombinasi jenis transportasi) untuk pengiriman barang hingga ke daerah yang sulit dijangkau oleh transportasi pada umumnya."
+  },
+  "Contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Punya masalah teknis? Ingin mengirim masukan tentang suatu fitur? Butuh detail tentang rencana Bisnis kami? Beritahu kami."
   }
 }

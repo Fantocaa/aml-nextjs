@@ -18,6 +18,7 @@ interface NavLink {
 interface Location {
   location: string;
   career: string;
+  contact: string;
 }
 
 const Navbar = () => {
@@ -34,6 +35,7 @@ const Navbar = () => {
     {
       location: `${t("location")}`,
       career: `${t("career")}`,
+      contact: `${t("contact")}`,
     },
   ];
 

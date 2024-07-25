@@ -5,6 +5,7 @@
     "service": "Services",
     "location": "Location",
     "career": "Careers",
+    "contact": "Contact Us",
     "link": "Other Links",
     "layanan": "Our Services",
     "footer": "Become the best leading, trusted and reliable Export and Import Logistics company by prioritizing customer trust and satisfaction."
@@ -65,7 +66,8 @@
     "domestic-meta": "Domestic Market | Reach To All Corners of The World With Us | PT. ANUGERAH MULTI LOGISTIK",
     "domestic": "Providing our integrated logistics services for the distribution of your local needs. With an extensive network throughout the country, we are ready to provide efficient and practical solutions for managing goods deliveries within the country.",
     "international-meta": "International Market | Reach To All Corners of The World With Us | PT. ANUGERAH MULTI LOGISTIK",
-    "international": "Find reliable global logistics solutions for your cross-border shipping needs. With experience and a strong international network, we are ready to help you manage cross-border goods shipments with efficiency and reliability."
+    "international": "Find reliable global logistics solutions for your cross-border shipping needs. With experience and a strong international network, we are ready to help you manage cross-border goods shipments with efficiency and reliability.",
+    "contact": "Contact | Reach To All Corners of The World With Us | PT. ANUGERAH MULTI LOGISTIK"
   },
   "About": {
     "header-1": "About Us",
@@ -103,5 +105,9 @@
     "content-intermodal-1": "We also provide Air Freight which includes handling sensitive shipments that require fast and precise service, namely via air for both domestic and international areas.",
     "content-intermodal-2": "We can provide Sea Freight with terms ranging from EXW (Ex-Work), FOB (Free On Board), CNF (Cost & Freight), & CIF (Cost Insurance & Freight) which are adjusted to your needs. We provide freight for both domestic and international shipping.",
     "content-intermodal-3": "One of our advantages as a transporter is that we can arrange multimodal delivery of goods (a combination of types of transportation) to send goods to areas that are difficult to reach by transportation in general."
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "Got a technical issue? Want to send feedback about a feature? Need details about our Business plan? Let us know."
   }
 }

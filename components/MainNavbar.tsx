@@ -21,6 +21,7 @@ interface NavLink {
 interface Location {
   location: string;
   career: string;
+  contact: string;
 }
 
 export default function MainNavbar({

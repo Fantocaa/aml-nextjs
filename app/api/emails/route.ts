@@ -1,8 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 import nodemailer from "nodemailer";
 
-// Handles POST requests to /api
-
 export async function POST(request: any) {
   const username = process.env.NEXT_PUBLIC_BURNER_USERNAME;
   const password = process.env.NEXT_PUBLIC_BURNER_PASSWORD;
@@ -17,13 +15,16 @@ export async function POST(request: any) {
 
   // create transporter object
   const transporter = nodemailer.createTransport({
+    // pool: true,
     // host: "srv1.kotakemail.com",
-    service: "gmail",
-    // port: 587,
-    // tls: {
-    //   ciphers: "SSLv3",
-    //   rejectUnauthorized: false,
-    // },
+    host: "smtp.gmail.com",
+    // service: "gmail",
+    port: 587,
+    secure: false,
+    tls: {
+      // ciphers: "SSLv3",
+      rejectUnauthorized: false,
+    },
 
     auth: {
       user: username,

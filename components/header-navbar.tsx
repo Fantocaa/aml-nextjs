@@ -39,6 +39,7 @@ interface ComponentItem {
 interface Location {
   location: string;
   career: string;
+  contact: string;
 }
 
 interface HeaderNavbarProps {
@@ -198,7 +199,7 @@ export default function HeaderNavbar({
                     >
                       <div className="flex gap-2 items-center">
                         <LucideMail />
-                        <h1>Hubungi Kami</h1>
+                        <h1> {location[0].contact}</h1>
                       </div>
                     </Button>
                   </LocaleLink>
