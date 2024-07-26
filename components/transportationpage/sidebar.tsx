@@ -81,7 +81,7 @@ export default function SidebarTransport() {
               <br />
               <br />
             </p>
-            <Accordion type="single" defaultValue="item-1" collapsible>
+            {/* <Accordion type="single" defaultValue="item-1" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger>Air Freight</AccordionTrigger>
                 <AccordionContent>{t("content-intermodal-1")}</AccordionContent>
@@ -92,23 +92,13 @@ export default function SidebarTransport() {
               </AccordionItem>
               <AccordionItem value="item-3">
                 <AccordionTrigger>Trucking</AccordionTrigger>
-                <AccordionContent>
-                  {/* Menjadi bagian dari holding{" "}
-                  <Link className="underline text-blue-500" href="tako.co.id">
-                    PT.TAKO ANUGERAH KOPORASI
-                  </Link>{" "}
-                  membuat kami memiliki kekuatan armada yang dapat menunjang
-                  pengerjaan logistik. Selain komitmen penyediaan trucking
-                  trailer, kami juga berpengalaman menangani pengiriman via
-                  kereta api. */}
-                  {t("content-trucking")}
-                </AccordionContent>
+                <AccordionContent>{t("content-trucking")}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
                 <AccordionTrigger>Multimoda</AccordionTrigger>
                 <AccordionContent>{t("content-intermodal-3")}</AccordionContent>
               </AccordionItem>
-            </Accordion>
+            </Accordion> */}
           </div>
         </div>
       </div>
