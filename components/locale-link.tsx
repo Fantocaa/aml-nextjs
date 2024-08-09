@@ -1,30 +1,3 @@
-// import { ReactNode } from "react";
-// import { useLocale } from "next-intl";
-// import Link, { LinkProps } from "next/link";
-
-// interface LocaleLinkProps extends LinkProps {
-//   children: ReactNode;
-//   className?: string;
-// }
-
-// const LocaleLink = ({
-//   href,
-//   children,
-//   className,
-//   ...props
-// }: LocaleLinkProps) => {
-//   const locale = useLocale(); // Gunakan useLocale dari next-intl
-//   const localizedHref = `/${locale}${href}`;
-
-//   return (
-//     <Link href={localizedHref} className={className} {...props}>
-//       {children}
-//     </Link>
-//   );
-// };
-
-// export default LocaleLink;
-
 import React, { ReactNode, forwardRef } from "react";
 import { useLocale } from "next-intl";
 import Link, { LinkProps } from "next/link";

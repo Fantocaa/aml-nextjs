@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function AboutMain() {
   const t = useTranslations("About");
@@ -10,11 +11,11 @@ export default function AboutMain() {
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-32">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-            <div className="relative h-64 lg:h-[40rem] overflow-hidden rounded-lg lg:order-last ">
+            <div className="relative h-64 lg:h-full overflow-hidden rounded-lg lg:order-last ">
               <Image
                 alt="about"
                 src="/images/image 2.png"
-                className="absolute inset-0 h-full lg:h-[40rem] w-full object-cover object-bottom"
+                className="absolute inset-0 h-full w-full object-cover object-bottom"
                 width={1080}
                 height={1080}
               />
@@ -26,9 +27,26 @@ export default function AboutMain() {
                 PT. ANUGERAH MULTI LOGISTIK
               </h2>
 
-              <p className="mt-4 text-gray-600 text-lg">{t("desc")}</p>
+              <p className="mt-4 text-gray-600 text-lg">
+                {t("desc")}
+                <br />
+                <br />
+                {t("desc2")}
+                <Link
+                  href="https://tako.co.id"
+                  target="__blank"
+                  className="text-blue-600"
+                >
+                  {" "}
+                  https://tako.co.id
+                </Link>
+                ){t("desc3")}
+                <br />
+                <br />
+                {t("desc4")}
+              </p>
 
-              <Tabs defaultValue="account" className="w-full mt-16">
+              <Tabs defaultValue="account" className="w-full mt-12">
                 <TabsList>
                   <TabsTrigger
                     value="account"
