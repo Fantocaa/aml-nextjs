@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import LocaleLink from "./locale-link";
+import LocalSwitcher from "./local-switcher";
 
 interface NavLink {
   id: number;
@@ -10,14 +11,24 @@ interface NavLink {
   path: string;
 }
 
+interface Location {
+  location: string;
+  career: string;
+  contact: string;
+}
+
 interface HeaderNavbarProps {
   NavLinks: NavLink[];
+  location: Location[];
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isOpen: boolean;
 }
 
 export default function HeaderNavbarMobile({
   setIsOpen,
+  isOpen,
   NavLinks,
+  location,
 }: HeaderNavbarProps) {
   return (
     <>
@@ -30,19 +41,23 @@ export default function HeaderNavbarMobile({
         animate={{ x: 0 }}
         exit={{ x: -300 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="md:hidden fixed inset-0 overflow-hidden z-50"
+        className="lg:hidden fixed inset-0 overflow-hidden z-50"
       >
         <div className="flex h-screen flex-col justify-between border-e bg-white w-1/2 ">
           <div className="px-4 py-6">
             <div className="flex justify-between">
-              <LocaleLink className="block text-teal-600" href="/">
+              <LocaleLink
+                className="block text-teal-600"
+                href="/"
+                onClick={() => setIsOpen(false)}
+              >
                 <span className="sr-only">Home</span>
                 <Image
                   src="/images/amlwhite.png"
                   alt="logo"
                   width={64}
                   height={64}
-                  className="w-16 md:w-40"
+                  className="w-16 lg:w-40"
                 />
               </LocaleLink>
               <button
@@ -66,7 +81,7 @@ export default function HeaderNavbarMobile({
             </div>
 
             <ul className="mt-6 space-y-1">
-              <li>
+              {/* <li>
                 <LocaleLink
                   href="/"
                   // onClick={handleLinkClick}
@@ -94,11 +109,28 @@ export default function HeaderNavbarMobile({
                 >
                   Services
                 </LocaleLink>
-              </li>
+              </li> */}
+
+              {NavLinks.map((link) => (
+                <LocaleLink
+                  key={link.id}
+                  href={link.path}
+                  className={link.path}
+                  legacyBehavior
+                  passHref
+                  onClick={() => setIsOpen(false)}
+                >
+                  <li className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                    {link.name}
+                  </li>
+                </LocaleLink>
+              ))}
               <li>
                 <details className="group [&_summary::-webkit-details-marker]:hidden">
                   <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                    <span className="text-sm font-medium"> Location </span>
+                    <span className="text-sm font-medium">
+                      {location[0].location}
+                    </span>
 
                     <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                       <svg
@@ -121,6 +153,7 @@ export default function HeaderNavbarMobile({
                       <LocaleLink
                         href="/domestic"
                         className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        onClick={() => setIsOpen(false)}
                       >
                         Domestic Market
                       </LocaleLink>
@@ -130,6 +163,7 @@ export default function HeaderNavbarMobile({
                       <LocaleLink
                         href="/international"
                         className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                        onClick={() => setIsOpen(false)}
                       >
                         International Market
                       </LocaleLink>
@@ -142,10 +176,12 @@ export default function HeaderNavbarMobile({
                   href="https://karier.tako.co.id/"
                   target="__blank"
                   className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                  onClick={() => setIsOpen(false)}
                 >
-                  Careers
+                  {location[0].career}
                 </Link>
               </li>
+              <LocalSwitcher />
             </ul>
           </div>
         </div>

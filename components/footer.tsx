@@ -44,7 +44,7 @@ const Footer = () => {
     <>
       <footer className="bg-darkpint">
         <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-6">
+          <div className="grid gap-8 lg:grid-cols-6">
             <div className="md:col-span-3">
               <div className="flex text-white justify-start items-center gap-2">
                 <Image
@@ -62,12 +62,12 @@ const Footer = () => {
 
               <ul className="mt-4 md:mt-8 flex justify-center gap-6 sm:justify-start md:gap-8"></ul>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:col-span-3">
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 lg:col-span-3">
               {Navlinks.map((categoryItem, index) => (
                 <div
                   key={categoryItem.category}
-                  className={`text-left sm:text-left col-span-2 md:col-span-1 ${
-                    index === 0 ? "md:col-start-2" : ""
+                  className={`text-left sm:text-left col-span-2 lg:col-span-1 ${
+                    index === 0 ? "lg:col-start-2" : ""
                   }`}
                 >
                   <p className="text-lg font-medium text-gray-200">

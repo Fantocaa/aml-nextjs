@@ -36,6 +36,7 @@ export default function MainNavbar({
   const [isOpen, setIsOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const [prevPathname, setPrevPathname] = useState("");
 
   const controls = useAnimation();
 
@@ -50,6 +51,17 @@ export default function MainNavbar({
 
   const pathname = usePathname();
   const isActive = (path: string) => path === pathname;
+
+  useEffect(() => {
+    if (pathname !== prevPathname) {
+      // Tutup sidebar hanya jika path berubah
+      if (isOpen) {
+        setIsOpen(false);
+      }
+      // Perbarui prevPathname untuk memantau perubahan berikutnya
+      setPrevPathname(pathname);
+    }
+  }, [pathname, prevPathname, isOpen]);
 
   const transitionDuration = 0.2;
 
@@ -99,7 +111,12 @@ export default function MainNavbar({
       />
       {isOpen && (
         <>
-          <HeaderNavbarMobile setIsOpen={setIsOpen} NavLinks={NavLinks} />
+          <HeaderNavbarMobile
+            setIsOpen={setIsOpen}
+            isOpen={isOpen}
+            NavLinks={NavLinks}
+            location={Location}
+          />
         </>
       )}
     </>

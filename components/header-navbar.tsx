@@ -108,14 +108,14 @@ export default function HeaderNavbar({
                   <Image
                     src="/images/aml.png"
                     alt="logo"
-                    width={64}
-                    height={64}
-                    className="w-full h-full"
+                    width={128}
+                    height={128}
+                    className="w-16 md:w-full h-full"
                   />
                 </Link>
               </div>
 
-              <div className="md:hidden">
+              <div className="lg:hidden">
                 <button
                   onClick={toggleMenu}
                   className="text-darkpint focus:outline-none"
@@ -137,7 +137,7 @@ export default function HeaderNavbar({
                 </button>
               </div>
 
-              <NavigationMenu className="hidden md:block">
+              <NavigationMenu className="hidden lg:block">
                 <NavigationMenuList>
                   {NavLinks.map((link) => (
                     <NavigationMenuItem key={link.id}>
@@ -189,7 +189,7 @@ export default function HeaderNavbar({
                 </NavigationMenuList>
               </NavigationMenu>
 
-              <div className="md:flex items-center gap-4 hidden">
+              <div className="lg:flex items-center gap-4 hidden">
                 <div className="sm:flex sm:gap-2 items-center">
                   <LocalSwitcher />
                   <LocaleLink href="/contact">

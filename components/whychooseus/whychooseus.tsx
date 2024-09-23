@@ -52,9 +52,9 @@ const WhyChooseUs = () => {
 
   return (
     <section>
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-        <div className="my-8 grid grid-cols-4 gap-4 md:my-16 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
-          <div className="flex items-start md:items-center gap-4 col-span-4 md:col-span-2 pt-16 md:pt-0">
+      <div className="mx-auto max-w-screen-xl px-4 pb-8 sm:px-6 sm:py-0 md:pb-4 lg:pb-0 lg:px-8 lg:py-16">
+        <div className="mb-8 grid grid-cols-4 gap-4 md:my-16 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+          <div className="flex items-start md:items-center gap-4 col-span-4 md:col-span-2">
             <div className="max-w-xl pb-4 flex flex-col items-start">
               <div className="font-bold col-span-3">
                 <h1 className="text-3xl md:text-4xl leading-snug">

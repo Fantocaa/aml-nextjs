@@ -31,7 +31,7 @@ export default function Header() {
           backgroundPositionY: "75%",
         }}
       >
-        <div className="max-w-screen-xl px-4 md:px-2 2xl:px-8 mx-auto">
+        <div className="max-w-screen-xl px-4 md:px-6 2xl:px-8 mx-auto">
           <div className="flex justify-center flex-col text-white">
             <h1 className=" text-3xl font-semibold">{t("header-1")}</h1>
             <Breadcrumb className="pt-4">

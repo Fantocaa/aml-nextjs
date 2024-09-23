@@ -21,7 +21,7 @@ export default function HeaderCarousel() {
             delay: 5000,
           }),
         ]}
-        className="h-[75dvh] md:h-full absolute"
+        className="h-[75dvh] md:h-[83dvh] lg:h-full absolute"
       >
         <CarouselContent className="h-full -ml-0">
           <CarouselItem className="h-full pl-0">

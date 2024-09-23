@@ -11,11 +11,11 @@ export default function AboutMain() {
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-32">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-            <div className="relative h-64 lg:h-full overflow-hidden rounded-lg lg:order-last ">
+            <div className="relative h-64 md:h-96 lg:h-full overflow-hidden rounded-lg lg:order-last ">
               <Image
                 alt="about"
                 src="/images/image 2.png"
-                className="absolute inset-0 h-full w-full object-cover object-bottom"
+                className="absolute inset-0 h-full w-full object-cover lg:object-bottom"
                 width={1080}
                 height={1080}
               />

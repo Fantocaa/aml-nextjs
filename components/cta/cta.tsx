@@ -37,7 +37,7 @@ const Cta = () => {
           }}
         >
           <div className="text-left ltr:sm:text-left rtl:sm:text-right p-8 md:p-12 z-10">
-            <h2 className="text-2xl font-bold text-white md:text-6xl lg:max-w-md">
+            <h2 className="text-2xl font-bold text-white md:text-4xl lg:text-6xl lg:max-w-md">
               {/* Get in touch with us */}
               {t("title")}
             </h2>

@@ -28,7 +28,6 @@ export default function RootLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <Navbar />
-
         {children}
         <Cta />
         <Footer />
