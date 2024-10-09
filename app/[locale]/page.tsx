@@ -1,12 +1,12 @@
 import Header from "@/components/header/header";
 import WhyChooseUs from "@/components/whychooseus/whychooseus";
 import Services from "@/components/services/services";
+import Member from "@/components/member/member";
+import { getTranslations } from "next-intl/server";
 // import Area from "@/components/area/area";
 // import Cta from "@/components/cta/cta";
-import Specialist from "@/components/specialist/specialist";
-import Member from "@/components/member/member";
-import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+// import Specialist from "@/components/specialist/specialist";
+// import type { Metadata } from "next";
 
 // export const metadata: Metadata = {
 //   title:
@@ -33,9 +33,6 @@ export async function generateMetadata({ params: { locale } }: Params) {
 export default function Home() {
   return (
     <section>
-      {/* <div className="text-darkpint relative z-50">
-        <h1>{t("title")}</h1>
-      </div> */}
       <Header />
       <WhyChooseUs />
       <Services />
